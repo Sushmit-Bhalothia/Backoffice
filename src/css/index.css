@@ -1,0 +1,182 @@
+:root {
+  --white: #ffffff;
+  --black: #333333;
+  --purple: #6d06c6;
+  --deeper-purple: #5d01a2;
+  --lilac: #fdfaff;
+  --grey-82: #828282;
+  --main-purple: #6d06c6;
+}
+
+.Backoffice_Log-in {
+  width: 100%;
+  height: 100%;
+  /* padding: 0 216px 0 0; */
+  display: flex;
+  flex-direction: row;
+  background-color: var(--white);
+}
+
+.Rectangle-1082 {
+  /* flex-basis: 40%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-content: center;
+  width: 40%;
+  height: 100vh;
+  /* height: 1024px; */
+  /* margin: 0 96px 0 0; */
+  /* padding: 30% 12% 2% 2%; */
+
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1);
+  background-color: var(--deeper-purple);
+}
+.be-2 {
+  /* width: 248px; */
+  height: 30%;
+  width: 60%;
+
+  /* padding: auto; */
+  margin: 0vh 20% 30vh 20%;
+  /* height: 180px; */
+
+  background-color: var(--white);
+}
+
+.Be-Backoffice-2021-All-rights-reserved {
+  width: 242px;
+  height: 12px;
+  /* margin: 32px 34px 0; */
+  margin-left: 30%;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--grey-82);
+}
+
+.Rectangle-1092 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+  width: 30%;
+  /* height: 382px; */
+  height: 50vh;
+  margin: 15% 10%;
+  /* padding: 40px 32px; */
+  border-radius: 8px;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1);
+  background-color: var(--white);
+}
+.Agreements-Section {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: left;
+  color: var(--white);
+}
+.Agreements-Section2 {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: left;
+  /* color: var(--black); */
+  color: var(--grey-82);
+  margin: 2%;
+}
+.Welcome-back {
+  /* margin: 0 112px 48px 53px; */
+  margin: 20px auto;
+  font-family: Montserrat;
+  font-size: 25px;
+
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.4;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--text-black);
+}
+.Label {
+  font-family: Montserrat;
+  font-size: 16px;
+  margin: 2vh 1vw;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: left;
+  color: var(--grey-82);
+}
+.Input {
+  /* width: 141px; */
+  /* height: 14px; */
+  width: 90%;
+  height: 25px;
+  margin: 2vh 1vw;
+  /* margin: 8px 106px 10px 8px; */
+  border: none;
+  border-bottom: solid #333333 1 px;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: left;
+  color: var(--grey-82);
+  box-shadow: 0 0 0.7px 0 var(--grey-82);
+  border-bottom: groove 1px var(--grey-82);
+  border-radius: 2px;
+  /* border-bottom: 1px inset #000; */
+}
+.signInConponents {
+  margin: auto;
+
+  justify-content: center;
+  align-content: center;
+}
+.Button {
+  width: 18vb;
+  height: 40px;
+  flex-grow: 0;
+  /* margin: 64px 95px 0 0; */
+  margin: 1vh 3vb;
+  border: solid 1px var(--main-purple);
+  /* padding: 13px 55px; */
+  border-radius: 100px;
+  background-color: var(--main-purple);
+  color: #ffffff;
+}
+.Button:hover {
+  background-color: white;
+  color: var(--main-purple);
+}
+.top-span {
+  position: absolute;
+  top: 0;
+}
