@@ -36,6 +36,10 @@
   /* width: 248px; */
   height: 30%;
   width: 60%;
+  background-image: url("../lib/Be_logo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
   /* padding: auto; */
   margin: 0vh 20% 30vh 20%;
@@ -83,6 +87,7 @@
   font-weight: 500;
   font-stretch: normal;
   font-style: normal;
+  cursor: pointer;
 
   line-height: 1;
   letter-spacing: normal;
@@ -156,16 +161,18 @@
 }
 .signInConponents {
   margin: auto;
-
-  justify-content: center;
+  /* display: flex; */
+  justify-content: space-between;
+  justify-content: "space";
   align-content: center;
 }
 .Button {
-  width: 18vb;
+  width: 8vw;
   height: 40px;
   flex-grow: 0;
   /* margin: 64px 95px 0 0; */
-  margin: 1vh 3vb;
+  /* margin: 0.5rem 1rem; */
+  margin-right: 10vb;
   border: solid 1px var(--main-purple);
   /* padding: 13px 55px; */
   border-radius: 100px;
@@ -175,8 +182,52 @@
 .Button:hover {
   background-color: white;
   color: var(--main-purple);
+  cursor: pointer;
 }
 .top-span {
   position: absolute;
   top: 0;
+  cursor: pointer;
+}
+.container {
+  position: relative;
+}
+.overlay-span-1 {
+  position: absolute;
+  top: 1vw;
+  left: 70%;
+  margin-left: 150px;
+  margin: 1px 8px;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: left;
+  cursor: pointer;
+  color: var(--text-black);
+
+  /* Add any other styles for the spans */
+}
+.overlay-span-2 {
+  position: absolute;
+  top: 1vw;
+  left: 50%;
+  cursor: pointer;
+  margin-left: 150px;
+  margin: 1px 8px;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: left;
+  color: var(--text-black);
+}
+.image_language {
+  margin: 2px;
 }

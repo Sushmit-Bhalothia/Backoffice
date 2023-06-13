@@ -1,5 +1,8 @@
 import "../../css/index.css";
+import { useNavigate } from "react-router-dom";
+function Handleclick() {}
 function SignInForm() {
+  const navigate = useNavigate();
   return (
     <div className="Rectangle-1092">
       <div className="signInConponents">
@@ -25,18 +28,19 @@ function SignInForm() {
           id="password"
         />
       </div>
-      <div className="signInConponents">
+      <div className="signInConponents " style={{ display: "flex" }}>
         <button
           className="Button"
           onClick={() => {
-            console.log("clicked");
+            navigate("/forgot-password");
           }}
         >
           Sign In
         </button>
         <span
+          style={{ cursor: "pointer" }}
           onClick={() => {
-            console.log("clicked");
+            navigate("/forgot-password");
           }}
         >
           {" "}
