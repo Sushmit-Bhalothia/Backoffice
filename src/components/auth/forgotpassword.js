@@ -1,10 +1,9 @@
 import "../../css/index.css";
-import Logo from "../screens/logo";
+import Logo from "../router/logo";
 import { Suspense } from "react";
-// import ForgotPasswordForm from "../screens/forgotpasswordform";
-import EmailSentModal from "../screens/EmailSentModal";
+import ForgotPasswordForm from "./forgotpasswordform";
 import Dropdown from "../sharedComponents/dropdown";
-function EmailSent() {
+function ForgotPassword() {
   return (
     <div className="Backoffice_Log-in">
       <Logo />
@@ -14,9 +13,9 @@ function EmailSent() {
           <Dropdown />
         </div>
         <span class="overlay-span-2">Contact Support</span>
-        <EmailSentModal />
+        <ForgotPasswordForm />
       </Suspense>
     </div>
   );
 }
-export default EmailSent;
+export default ForgotPassword;

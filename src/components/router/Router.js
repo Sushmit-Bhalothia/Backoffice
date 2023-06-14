@@ -1,7 +1,8 @@
 // import { Dialog } from "@headlessui/react";
 import { lazy, Suspense } from "react";
+import Right1 from "../auth/Right1";
 
-import EmailSent from "../screens/EmailSent";
+import EmailSent from "../auth/EmailSent";
 import "../../css/index.css";
 import {
   Outlet,
@@ -10,20 +11,20 @@ import {
   useNavigate,
 } from "react-router-dom";
 
-import Left from "../screens/logo";
+import Left from "./logo";
 import Footer from "./footer";
 import Navbar from "./Navbar";
-import SignIn from "../screens/Signin";
-import ForgotPassword from "../screens/forgotpassword";
+import SignIn from "../auth/Signin";
+import ForgotPassword from "../auth/forgotpassword";
 import Home from "../screens/main";
 const Loading = () => <p>Loading...</p>;
-const Page404Screen = lazy(() => import("../screens/404"));
+const Page404Screen = lazy(() => import("./404"));
 const PrivateRoute = ({ path, element: Element, isAuthenticated }) => {
   const navigate = useNavigate();
 
   if (!isAuthenticated) {
     navigate("/sign-in");
-    return null;
+    return SignIn;
     // return <Redirect to="/auth-sign-in" />;
   }
 
@@ -57,7 +58,7 @@ export const Router = () => {
 };
 
 const InnerRouter = () => {
-  const isAuthenticated = true;
+  const isAuthenticated = false;
   const routes = [
     {
       path: "/",
@@ -92,20 +93,20 @@ const InnerRouter = () => {
         },
       ],
     },
-    // {
-    //   path: "/auth",
-    //   element: <Layout2 />,
-    //   children: [
-    //     {
-    //       path: "/auth/sign-in",
-    //       element: <Right1 />,
-    //     },
-    //     {
-    //       path: "/auth/forgot-password",
-    //       element: <Right2 />,
-    //     },
-    //   ],
-    // },
+    {
+      path: "/auth",
+      element: <Layout2 />,
+      children: [
+        {
+          path: "/auth/sign-in",
+          element: <Right1 />,
+        },
+        // {
+        //   path: "/auth/forgot-password",
+        //   element: <Right2 />,
+        // },
+      ],
+    },
   ];
 
   const element = useRoutes(routes);
