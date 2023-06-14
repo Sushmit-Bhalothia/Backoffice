@@ -1,5 +1,8 @@
 // import { Dialog } from "@headlessui/react";
 import { lazy, Suspense } from "react";
+
+import EmailSent from "../screens/EmailSent";
+import "../../css/index.css";
 import {
   Outlet,
   useRoutes,
@@ -7,6 +10,7 @@ import {
   useNavigate,
 } from "react-router-dom";
 
+import Left from "../screens/logo";
 import Footer from "./footer";
 import Navbar from "./Navbar";
 import SignIn from "../screens/Signin";
@@ -17,9 +21,10 @@ const Page404Screen = lazy(() => import("../screens/404"));
 const PrivateRoute = ({ path, element: Element, isAuthenticated }) => {
   const navigate = useNavigate();
 
-  if (!isAuthenticated && path === "/") {
-    navigate("/signin");
+  if (!isAuthenticated) {
+    navigate("/sign-in");
     return null;
+    // return <Redirect to="/auth-sign-in" />;
   }
 
   return Element;
@@ -34,6 +39,15 @@ function Layout() {
     </div>
   );
 }
+function Layout2() {
+  return (
+    <div className="Backoffice_Log-in">
+      <Left />
+      <Outlet />
+    </div>
+  );
+}
+
 export const Router = () => {
   return (
     <BrowserRouter>
@@ -67,6 +81,10 @@ const InnerRouter = () => {
           path: "/forgot-password",
           element: <ForgotPassword />,
         },
+        {
+          path: "/email-sent",
+          element: <EmailSent />,
+        },
 
         {
           path: "*",
@@ -74,6 +92,20 @@ const InnerRouter = () => {
         },
       ],
     },
+    // {
+    //   path: "/auth",
+    //   element: <Layout2 />,
+    //   children: [
+    //     {
+    //       path: "/auth/sign-in",
+    //       element: <Right1 />,
+    //     },
+    //     {
+    //       path: "/auth/forgot-password",
+    //       element: <Right2 />,
+    //     },
+    //   ],
+    // },
   ];
 
   const element = useRoutes(routes);

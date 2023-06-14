@@ -129,6 +129,7 @@
   font-size: 16px;
   margin: 2vh 1vw;
   font-weight: 500;
+  width: 100%;
   font-stretch: normal;
   font-style: normal;
   line-height: 1;
@@ -166,10 +167,28 @@
   justify-content: "space";
   align-content: center;
 }
+.FormText {
+  width: 90%;
+  height: 60px;
+  /* margin: 16px 0 48px; */
+  margin: 5%;
+  /* margin-top: 3%; */
+  font-family: Montserrat;
+  font-size: 2vh;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  /* line-height: 1.4; */
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--text-black);
+}
 .Button {
   width: 8vw;
-  height: 40px;
+  height: 5vh;
   flex-grow: 0;
+  font-size: 1.75vh;
+
   /* margin: 64px 95px 0 0; */
   /* margin: 0.5rem 1rem; */
   margin-right: 10vb;

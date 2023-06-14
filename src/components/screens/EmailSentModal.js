@@ -1,53 +1,60 @@
 import "../../css/index.css";
 import { useNavigate } from "react-router-dom";
 
-function SignInForm() {
+function EmailSentModal() {
   const navigate = useNavigate();
   return (
     <div className="Rectangle-1092">
       <div className="signInConponents">
-        <div class="Welcome-back ">Welcome back!</div>
+        <div class="Welcome-back ">Email Sent !</div>
+        <p className="FormText">
+          {" "}
+          Please, enter the email address you used to create your Be account and
+          you will receive a password recovery link{" "}
+        </p>
 
-        <label className="Label" htmlFor="loginId">
+        {/* <label className="Label" htmlFor="loginId">
           Login ID
         </label>
+
         <input
           placeholder="User Name or Email"
           className="Input"
           type="text"
           id="loginId"
-        />
+        /> */}
 
-        <label className="Label" htmlFor="password">
+        {/* <label className="Label" htmlFor="password">
           Password
-        </label>
-        <input
+        </label> */}
+        {/* <input
           placeholder="Your Password Here "
           className="Input"
           type="password"
           id="password"
-        />
+        /> */}
       </div>
       <div className="signInConponents " style={{ display: "flex" }}>
         <button
           className="Button"
+          style={{ margin: "auto" }}
           onClick={() => {
-            navigate("/");
+            navigate("/sign-in");
           }}
         >
-          Sign In
+          Great !
         </button>
-        <span
+        {/* <span
           style={{ cursor: "pointer" }}
           onClick={() => {
             navigate("/forgot-password");
           }}
         >
           {" "}
-          Forgot password
-        </span>
+          Cancel
+        </span> */}
       </div>
     </div>
   );
 }
-export default SignInForm;
+export default EmailSentModal;
