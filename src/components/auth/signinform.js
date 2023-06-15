@@ -32,13 +32,13 @@ function SignInForm() {
         <button
           className="Button"
           onClick={() => {
-            navigate("/");
+            navigate("/setup-profile");
           }}
         >
           Sign In
         </button>
         <span
-          style={{ cursor: "pointer" }}
+          style={{ cursor: "pointer", fontSize: "2vh" }}
           onClick={() => {
             navigate("/forgot-password");
           }}
