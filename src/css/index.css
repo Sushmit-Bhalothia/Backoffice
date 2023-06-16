@@ -7,6 +7,9 @@
   --grey-82: #828282;
   --main-purple: #6d06c6;
 }
+.outer {
+  margin-left: 10vw;
+}
 
 .Backoffice_Log-in {
   width: 100%;
@@ -16,7 +19,9 @@
   flex-direction: row;
   background-color: var(--white);
 }
-
+#my-superset-container {
+  margin-top: 10vw;
+}
 .Rectangle-1082 {
   /* flex-basis: 40%; */
   display: flex;
@@ -44,8 +49,6 @@
   /* padding: auto; */
   margin: 0vh 20% 30vh 20%;
   /* height: 180px; */
-
-  background-color: var(--white);
 }
 
 .Be-Backoffice-2021-All-rights-reserved {
@@ -113,6 +116,7 @@
 .Welcome-back {
   /* margin: 0 112px 48px 53px; */
   margin: 2vh auto;
+
   font-family: Montserrat;
   font-size: 3vh;
 
@@ -142,10 +146,11 @@
 }
 .Label {
   font-family: Montserrat;
+  /* display: block; */
   font-size: 1.75vh;
   margin: 2vh 1vw;
   font-weight: 500;
-  width: 100%;
+  /* width: 100%; */
   font-stretch: normal;
   font-style: normal;
   line-height: 1;
@@ -281,6 +286,9 @@
   cursor: pointer;
   text-decoration: underline;
 }
+.Lower {
+  display: none;
+}
 .top-span {
   position: absolute;
   top: 0;
@@ -293,10 +301,10 @@
   position: absolute;
   top: 1vw;
   left: 70%;
-  margin-left: 150px;
-  margin: 1px 8px;
+
+  /* margin: 1px 8px; */
   font-family: Montserrat;
-  font-size: 18px;
+  font-size: 2vh;
   font-weight: 500;
   font-stretch: normal;
   font-style: normal;
@@ -313,10 +321,9 @@
   top: 1vw;
   left: 50%;
   cursor: pointer;
-  margin-left: 150px;
-  margin: 1px 8px;
+  margin-left: 0vw;
   font-family: Montserrat;
-  font-size: 18px;
+  font-size: 2vh;
   font-weight: 500;
   font-stretch: normal;
   font-style: normal;
@@ -355,4 +362,123 @@
   background-color: #eaeaea;
   text-align: center;
   cursor: pointer;
+}
+#mobile-logo {
+  display: none;
+}
+
+@media screen and (max-width: 1100px) {
+  .Rectangle-1092 {
+    width: 50vw;
+    margin: auto;
+  }
+  .outer {
+    margin-left: 5vw;
+  }
+  /* .Backoffice_Log-in {
+    background-color: var(--deeper-purple);
+  } */
+  .Smaller-Button {
+    width: 8vw;
+  }
+  .Small-Button {
+    width: 10vw;
+  }
+  .Button {
+    width: 11vw;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    background-color: var(--deeper-purple);
+  }
+  .Rectangle-1082 {
+    display: none;
+  }
+  .Lower {
+    display: none;
+  }
+
+  .Rectangle-1092 {
+    width: 80vw;
+    /* height: 120vh; */
+    overflow: auto;
+    /* margin-top: 0px; */
+  }
+  .Backoffice_Log-in {
+    background-color: var(--deeper-purple);
+  }
+  .Smaller-Button {
+    width: 8vw;
+  }
+  .Small-Button {
+    width: 10vw;
+  }
+  .Button {
+    width: 11vw;
+    /* height: 12vh; */
+  }
+  .Input {
+    width: 95%;
+  }
+
+  #mobile-logo {
+    /* width: 60%; */
+    display: block;
+    background-image: url("../lib/Be_logo.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* padding: auto; */
+    margin: 5vh 10vw 0vh 20%;
+  }
+  .Label {
+    font-size: 2vh;
+  }
+  .Input {
+    font-size: 2vh;
+    height: 4vh;
+  }
+  .Welcome-back {
+    font-size: 3.5vh;
+    margin-top: 18vh;
+  }
+  .FormText {
+    font-size: 2.5vh;
+    margin-bottom: 5vh;
+  }
+  .overlay-span-2 {
+    left: 10%;
+    color: var(--white);
+  }
+  .overlay-span-1 {
+    color: var(--white);
+  }
+  .Button {
+    width: 16vw;
+    margin-top: 2vh;
+    margin-bottom: 5vh;
+  }
+  .Lower {
+    display: block;
+  }
+}
+@media screen and (max-width: 450px) {
+  .Rectangle-1092 {
+    width: 95vw;
+  }
+  .outer {
+    margin-left: 2.5vw;
+  }
+  .Smaller-Button {
+    width: 15vw;
+  }
+  .Small-Button {
+    width: 17vw;
+  }
+  .Button {
+    width: 20vw;
+  }
 }
