@@ -1,4 +1,4 @@
-import "../../css/index.css";
+import "../../css/auth-onboarding/index.css";
 import { useNavigate } from "react-router-dom";
 
 function EmailSentModal() {

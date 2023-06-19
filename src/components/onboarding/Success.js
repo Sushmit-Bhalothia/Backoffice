@@ -1,5 +1,5 @@
-import "../../css/index.css";
-import { Suspense } from "react";
+import "../../css/auth-onboarding/index.css";
+
 // import SignInForm from "./signinform";
 import { useNavigate } from "react-router-dom";
 import Dropdown from "../sharedComponents/dropdown";

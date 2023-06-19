@@ -1,4 +1,4 @@
-import "../../css/index.css";
+import "../../css/auth-onboarding/index.css";
 import Logo from "../router/logo";
 import { Suspense } from "react";
 // import ForgotPasswordForm from "../screens/forgotpasswordform";

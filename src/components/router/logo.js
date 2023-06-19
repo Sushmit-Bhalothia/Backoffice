@@ -1,4 +1,4 @@
-import "../../css/index.css";
+import "../../css/auth-onboarding/index.css";
 function Left() {
   return (
     <div className="Rectangle-1082">

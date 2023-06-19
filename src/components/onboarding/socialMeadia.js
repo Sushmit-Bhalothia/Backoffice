@@ -1,4 +1,4 @@
-import "../../css/index.css";
+import "../../css/auth-onboarding/index.css";
 import Logo from "../router/logo";
 import { useNavigate } from "react-router-dom";
 import Dropdown from "../sharedComponents/dropdown";

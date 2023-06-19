@@ -1,4 +1,4 @@
-import "../../css/index.css";
+import "../../css/auth-onboarding/index.css";
 import { Suspense } from "react";
 import SignInForm from "./signinform";
 import Dropdown from "../sharedComponents/dropdown";

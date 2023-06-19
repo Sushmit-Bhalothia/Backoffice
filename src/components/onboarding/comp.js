@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "../../css/index.css";
+import "../../css/auth-onboarding/index.css";
 import {
   faInstagram,
   faFacebook,

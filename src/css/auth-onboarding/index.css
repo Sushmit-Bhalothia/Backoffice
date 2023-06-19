@@ -7,6 +7,17 @@
   --grey-82: #828282;
   --main-purple: #6d06c6;
 }
+
+/* this is css for login and onboarding pages --
+1)containers                                  --> 21   to  202
+2)text and form fields                        --> 203  to  306
+3) buttons                                    --> 307  to  386
+4)Media queries for small desktop             --> 387  to  413
+5) media queries for phones                   --> 414  to  492 
+6) media queries for small phones             --> 492  to  510
+*/
+/* -------------------------------------------------------------------------------------------------------- */
+/* CONTAINERS */
 .outer {
   margin-left: 10vw;
 }
@@ -41,7 +52,7 @@
   /* width: 248px; */
   height: 30%;
   width: 60%;
-  background-image: url("../lib/Be_logo.png");
+  background-image: url("../../lib/Be_logo.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -113,7 +124,86 @@
   color: var(--grey-82);
   margin: 2%;
 }
-.Welcome-back {
+.Lower {
+  display: none;
+}
+.top-span {
+  position: absolute;
+  top: 0;
+  cursor: pointer;
+}
+.container {
+  position: relative;
+}
+.overlay-span-1 {
+  position: absolute;
+  top: 1vw;
+  left: 70%;
+
+  /* margin: 1px 8px; */
+  font-family: Montserrat;
+  font-size: 2vh;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: left;
+  cursor: pointer;
+  color: var(--text-black);
+
+  /* Add any other styles for the spans */
+}
+.overlay-span-2 {
+  position: absolute;
+  top: 1vw;
+  left: 50%;
+  cursor: pointer;
+  margin-left: 0vw;
+  font-family: Montserrat;
+  font-size: 2vh;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: left;
+  color: var(--text-black);
+}
+.image_language {
+  margin: 2px;
+}
+
+.file-input-container {
+  width: 95%;
+  margin: auto;
+  margin-top: 1vh;
+  text-align: center;
+  height: 15vh;
+  border: dashed var(--grey-82) 1px;
+}
+
+.file-input-container input[type="file"] {
+  display: none;
+}
+
+.file-input-container label.upload-button-label {
+  margin: auto;
+  display: block;
+  width: 20%;
+  padding: 8px;
+
+  background-color: #eaeaea;
+  text-align: center;
+  cursor: pointer;
+}
+#mobile-logo {
+  display: none;
+}
+
+/* TEXTS AND FORM FIELDS  */
+/* -------------------------------------------------------------------------------------------------------- */
+Welcome-back {
   /* margin: 0 112px 48px 53px; */
   margin: 2vh auto;
 
@@ -211,6 +301,9 @@
   text-align: center;
   color: var(--text-black);
 }
+
+/* BUTTONS  */
+/* -------------------------------------------------------------------------------------------------------- */
 .Button {
   width: 8.5vw;
   height: 5vh;
@@ -286,86 +379,13 @@
   cursor: pointer;
   text-decoration: underline;
 }
-.Lower {
-  display: none;
-}
-.top-span {
-  position: absolute;
-  top: 0;
-  cursor: pointer;
-}
-.container {
-  position: relative;
-}
-.overlay-span-1 {
-  position: absolute;
-  top: 1vw;
-  left: 70%;
-
-  /* margin: 1px 8px; */
-  font-family: Montserrat;
-  font-size: 2vh;
-  font-weight: 500;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1;
-  letter-spacing: normal;
-  text-align: left;
-  cursor: pointer;
-  color: var(--text-black);
-
-  /* Add any other styles for the spans */
-}
-.overlay-span-2 {
-  position: absolute;
-  top: 1vw;
-  left: 50%;
-  cursor: pointer;
-  margin-left: 0vw;
-  font-family: Montserrat;
-  font-size: 2vh;
-  font-weight: 500;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1;
-  letter-spacing: normal;
-  text-align: left;
-  color: var(--text-black);
-}
-.image_language {
-  margin: 2px;
-}
 .clickable {
   cursor: pointer;
   color: blue;
 }
 
-.file-input-container {
-  width: 95%;
-  margin: auto;
-  margin-top: 1vh;
-  text-align: center;
-  height: 15vh;
-  border: dashed var(--grey-82) 1px;
-}
-
-.file-input-container input[type="file"] {
-  display: none;
-}
-
-.file-input-container label.upload-button-label {
-  margin: auto;
-  display: block;
-  width: 20%;
-  padding: 8px;
-
-  background-color: #eaeaea;
-  text-align: center;
-  cursor: pointer;
-}
-#mobile-logo {
-  display: none;
-}
+/* MEDIA QUERIES FOR SMALL DESKTOP */
+/* -------------------------------------------------------------------------------------------------------- */
 
 @media screen and (max-width: 1100px) {
   .Rectangle-1092 {
@@ -389,6 +409,8 @@
   }
 }
 
+/* MEDIA QUERIES FOR PHONES OF LARGE DISPLAY */
+/* -------------------------------------------------------------------------------------------------------- */
 @media screen and (max-width: 700px) {
   body {
     background-color: var(--deeper-purple);
@@ -426,7 +448,7 @@
   #mobile-logo {
     /* width: 60%; */
     display: block;
-    background-image: url("../lib/Be_logo.png");
+    background-image: url("../../lib/Be_logo.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -465,6 +487,9 @@
     display: block;
   }
 }
+
+/* MEDIA QUERIES FOR PHONES OF SMALL DISPLAY */
+/* -------------------------------------------------------------------------------------------------------- */
 @media screen and (max-width: 450px) {
   .Rectangle-1092 {
     width: 95vw;
