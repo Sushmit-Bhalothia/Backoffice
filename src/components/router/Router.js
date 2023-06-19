@@ -12,6 +12,7 @@ import {
 import SetUpProfile from "../onboarding/SetupProfile";
 
 import Success from "../onboarding/Success";
+import Embed from "../screens/embed";
 
 import Footer from "./footer";
 import Navbar from "./Navbar";
@@ -39,7 +40,7 @@ const PrivateRoute = ({ path, element: Element, isAuthenticated }) => {
 function Layout() {
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
       <Outlet />
       <Footer />
     </div>
@@ -106,6 +107,14 @@ const InnerRouter = () => {
         {
           path: "/success",
           element: <Success />,
+        },
+        {
+          path: "/header",
+          element: <Navbar />,
+        },
+        {
+          path: "/embed",
+          element: <Embed />,
         },
 
         {
