@@ -1,4 +1,4 @@
-function Main() {
+function Hot100() {
   return (
     <div>
       <h1
@@ -10,9 +10,9 @@ function Main() {
           marginTop: "20vh",
         }}
       >
-        Dashboard
+        Hot 100
       </h1>
     </div>
   );
 }
-export default Main;
+export default Hot100;

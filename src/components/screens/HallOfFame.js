@@ -1,4 +1,4 @@
-function Main() {
+function HallFame() {
   return (
     <div>
       <h1
@@ -10,9 +10,9 @@ function Main() {
           marginTop: "20vh",
         }}
       >
-        Dashboard
+        Hall of fame
       </h1>
     </div>
   );
 }
-export default Main;
+export default HallFame;

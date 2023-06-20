@@ -10,7 +10,7 @@ function Main() {
           marginTop: "20vh",
         }}
       >
-        Dashboard
+        snapshot
       </h1>
     </div>
   );

@@ -3,8 +3,10 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import ae from "../../lib/Be_logo.png";
 import Dropdown from "../sharedComponents/dropdown";
+import { useNavigate } from "react-router-dom";
 import ProfileModal from "./profilemodal";
 function Navbar() {
+  const navigate = useNavigate();
   const Name = "Sushmit"; //from database
   const [activePage, setActivePage] = useState("dash");
   return (
@@ -13,7 +15,10 @@ function Navbar() {
         <div className="logoHeader"></div>
         <span
           className={activePage === "dash" ? "active headerText" : "headerText"}
-          onClick={() => setActivePage("dash")}
+          onClick={() => {
+            setActivePage("dash");
+            navigate("");
+          }}
         >
           Dashboard
           <div
@@ -22,7 +27,10 @@ function Navbar() {
         </span>
         <span
           className={activePage === "snap" ? "active headerText" : "headerText"}
-          onClick={() => setActivePage("snap")}
+          onClick={() => {
+            setActivePage("snap");
+            navigate("/snapshot");
+          }}
         >
           SnapShot
           <div
@@ -32,7 +40,10 @@ function Navbar() {
         <span
           c
           className={activePage === "hot" ? "active headerText" : "headerText"}
-          onClick={() => setActivePage("hot")}
+          onClick={() => {
+            setActivePage("hot");
+            navigate("/hot-100");
+          }}
         >
           Hot 100
           <div
@@ -43,7 +54,10 @@ function Navbar() {
           className={
             activePage === "analytics" ? "active headerText" : "headerText"
           }
-          onClick={() => setActivePage("analytics")}
+          onClick={() => {
+            setActivePage("analytics");
+            navigate("/analytics");
+          }}
         >
           Analytics
           <div
@@ -56,7 +70,10 @@ function Navbar() {
           className={
             activePage === "hallFame" ? "active headerText" : "headerText"
           }
-          onClick={() => setActivePage("hallFame")}
+          onClick={() => {
+            setActivePage("hallFame");
+            navigate("/hall-of-fame");
+          }}
         >
           Hall of Fame
           <div
@@ -67,7 +84,10 @@ function Navbar() {
           className={
             activePage === "Social" ? "active headerText" : "headerText"
           }
-          onClick={() => setActivePage("Social")}
+          onClick={() => {
+            setActivePage("Social");
+            navigate("/social");
+          }}
         >
           Be Social
           <div

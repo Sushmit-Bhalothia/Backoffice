@@ -1,4 +1,4 @@
-function Main() {
+function Analytic() {
   return (
     <div>
       <h1
@@ -10,9 +10,9 @@ function Main() {
           marginTop: "20vh",
         }}
       >
-        Dashboard
+        Analytics
       </h1>
     </div>
   );
 }
-export default Main;
+export default Analytic;
