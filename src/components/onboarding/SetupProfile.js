@@ -29,7 +29,7 @@ function SetUpProfile() {
           className="Rectangle-1092"
         >
           <div class="overlay-span-1">
-            <img src="" alt=" " />
+            {/* <img src="" alt=" " /> */}
             <Dropdown />
           </div>
 

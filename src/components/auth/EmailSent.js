@@ -25,7 +25,7 @@ function EmailSent() {
             here is the content */}
           </div>
           <div class="overlay-span-1">
-            <img src="" alt=" " />
+            {/* <img src="" alt=" " /> */}
             <Dropdown />
           </div>
           <span class="overlay-span-2">Contact Support</span>
