@@ -8,90 +8,128 @@ import ProfileModal from "./profilemodal";
 function Navbar() {
   const navigate = useNavigate();
   const Name = "Sushmit"; //from database
-  const [activePage, setActivePage] = useState("dash");
+
   return (
     <>
       <div className="Header">
         <div className="logoHeader"></div>
         <span
-          className={activePage === "dash" ? "active headerText" : "headerText"}
+          className={
+            window.location.pathname === "/"
+              ? "active headerText"
+              : "headerText"
+          }
           onClick={() => {
-            setActivePage("dash");
+            //setActivePage("/");
             navigate("");
           }}
         >
           Dashboard
           <div
-            className={activePage === "dash" ? "underline_a" : "headerText"}
+            className={
+              window.location.pathname === "/" ? "underline_a" : "headerText"
+            }
           ></div>
         </span>
         <span
-          className={activePage === "snap" ? "active headerText" : "headerText"}
+          className={
+            window.location.pathname === "/snapshot"
+              ? "active headerText"
+              : "headerText"
+          }
           onClick={() => {
-            setActivePage("snap");
+            //  setActivePage("/snapshot");
             navigate("/snapshot");
           }}
         >
           SnapShot
           <div
-            className={activePage === "snap" ? "underline_a" : "headerText"}
+            className={
+              window.location.pathname === "/snapshot"
+                ? "underline_a"
+                : "headerText"
+            }
           ></div>
         </span>
         <span
           c
-          className={activePage === "hot" ? "active headerText" : "headerText"}
+          className={
+            window.location.pathname === "/hot-100"
+              ? "active headerText"
+              : "headerText"
+          }
           onClick={() => {
-            setActivePage("hot");
+            //setActivePage("/hot-100");
             navigate("/hot-100");
           }}
         >
           Hot 100
           <div
-            className={activePage === "hot" ? "underline_a" : "headerText"}
+            className={
+              window.location.pathname === "/hot-100"
+                ? "underline_a"
+                : "headerText"
+            }
           ></div>
         </span>
         <span
           className={
-            activePage === "analytics" ? "active headerText" : "headerText"
+            window.location.pathname === "/analytics"
+              ? "active headerText"
+              : "headerText"
           }
           onClick={() => {
-            setActivePage("analytics");
+            // setActivePage("analytics");
             navigate("/analytics");
           }}
         >
           Analytics
           <div
             className={
-              activePage === "analytics" ? "underline_a" : "headerText"
+              window.location.pathname === "/analytics"
+                ? "underline_a"
+                : "headerText"
             }
           ></div>
         </span>
         <span
           className={
-            activePage === "hallFame" ? "active headerText" : "headerText"
+            window.location.pathname === "/hall-of-fame"
+              ? "active headerText"
+              : "headerText"
           }
           onClick={() => {
-            setActivePage("hallFame");
+            // setActivePage("hallFame");
             navigate("/hall-of-fame");
           }}
         >
           Hall of Fame
           <div
-            className={activePage === "hallFame" ? "underline_a" : "headerText"}
+            className={
+              window.location.pathname === "/hall-of-fame"
+                ? "underline_a"
+                : "headerText"
+            }
           ></div>
         </span>
         <span
           className={
-            activePage === "Social" ? "active headerText" : "headerText"
+            window.location.pathname === "/social"
+              ? "active headerText"
+              : "headerText"
           }
           onClick={() => {
-            setActivePage("Social");
+            // setActivePage("Social");
             navigate("/social");
           }}
         >
           Be Social
           <div
-            className={activePage === "Social" ? "underline_a" : "headerText"}
+            className={
+              window.location.pathname === "/social"
+                ? "underline_a"
+                : "headerText"
+            }
           ></div>
         </span>
 
