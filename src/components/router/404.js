@@ -3,11 +3,13 @@ function Page404() {
     <>
       <div className="hero min-h-screen bg-gray-800">
         <div className="text-center hero-content text-3xl font-bold">
-          <div>
+          <div style={{ margin: "10vw" }}>
             <h1>The page is not found.</h1>
             <div className="mt-4">
+              go to Dashboard
+              <br />
               <a href="/" className="link-primary">
-                Top Page
+                Dashboard
               </a>
             </div>
           </div>

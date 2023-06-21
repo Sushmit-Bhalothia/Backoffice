@@ -17,6 +17,7 @@ import HallFame from "../screens/HallOfFame";
 import Analtics from "../screens/analytic";
 import Protected from "../protected";
 import ScreeNotFound from "../router/404";
+import Embed from "../screens/embed";
 
 function App() {
   const [isSignedIn, setIsSignedIn] = useState(true);
@@ -97,9 +98,9 @@ function App() {
                   <Route
                     path="/*"
                     element={
-                      // <Protected isSignedIn={isSignedIn}>
-                      <ScreeNotFound />
-                      //</Protected>
+                      <Protected isSignedIn={isSignedIn}>
+                        <Embed />
+                      </Protected>
                     }
                   />
                 </Routes>
