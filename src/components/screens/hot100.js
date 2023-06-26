@@ -9,31 +9,7 @@ const fetchGuestToken = async () => {
 };
 function Hot100() {
   const [activePage, setActivePage] = useState("2");
-  // useEffect(() => {
-  //   const loadDashboard = async () => {
-  //     const guestToken = await fetchGuestToken();
 
-  //     embedDashboard({
-  //       id: process.env.REACT_APP_ID,
-  //       supersetDomain: process.env.REACT_APP_URL,
-  //       mountPoint: document.getElementById("dashboard"),
-  //       dashboardUiConfig: {
-  //         hideTitle: true,
-  //         hideChartControls: true,
-  //         filters: {
-  //           visible: false,
-  //         },
-  //       },
-  //       iframeAttributes: {
-  //         id: "my-test-frame",
-  //         className: "my-test-frame-class",
-  //       },
-  //       fetchGuestToken: () => Promise.resolve(guestToken),
-  //     });
-  //   };
-
-  //   loadDashboard();
-  // }, []);
   let dashboardId;
   if (activePage === "1") {
     dashboardId = process.env.REACT_APP_ID; // Replace with the first dashboard ID
@@ -41,79 +17,6 @@ function Hot100() {
     dashboardId = process.env.REACT_APP_ID2; // Replace with the second dashboard ID
   }
 
-  return (
-    <div className="outer">
-      {/* <Helmet>
-        <style type="text/css">{`
-          iframe {
-            height: 65vh !important;
-            width: 80vw !important
-            margin-top: -17vh;
-            border: none;
-            padding-bottom: -20vh;
-          }
-          body {
-            background-color: white;
-          }
-        `}</style>
-      </Helmet> */}
-      <div className="navi">
-        <div
-          className={
-            activePage === "1"
-              ? "active side-nav-elements"
-              : "side-nav-elements"
-          }
-          onClick={() => {
-            setActivePage("1");
-          }}
-        >
-          Top Enrollers
-        </div>
-        <div
-          className={
-            activePage === "2"
-              ? "active side-nav-elements"
-              : "side-nav-elements"
-          }
-          onClick={() => {
-            setActivePage("2");
-          }}
-        >
-          Top Producers
-        </div>
-        <div
-          className={
-            activePage === "3"
-              ? "active side-nav-elements"
-              : "side-nav-elements"
-          }
-          onClick={() => {
-            setActivePage("3");
-          }}
-        >
-          {" "}
-          My Top Enroller
-        </div>
-        <div
-          className={
-            activePage === "4"
-              ? "active side-nav-elements"
-              : "side-nav-elements"
-          }
-          onClick={() => {
-            setActivePage("4");
-          }}
-        >
-          {" "}
-          My Top Producers
-        </div>
-      </div>
-      <div id="dashboard">
-        {" "}
-        <Embed id={process.env.REACT_APP_ID} />
-      </div>
-    </div>
-  );
+  return <div className="outer"></div>;
 }
 export default Hot100;

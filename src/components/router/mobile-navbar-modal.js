@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import "../../css/headerFooter.css";
 import ae from "../../lib/mobile-nav-icon.png";
+import { useNavigate } from "react-router-dom";
 import ProfileModal from "./profilemodal";
 import Dropdown from "../sharedComponents/dropdown";
+import aae from "../../lib/Be_logo.png";
+import Logout from "../Logout";
 
 export default function NavModal() {
+  const navigate = useNavigate();
   const Name = "Sushmit"; //from database
   const [modal, setModal] = useState(false);
   const [activeSubMenu, setActiveSubMenu] = useState(null);
@@ -44,10 +48,18 @@ export default function NavModal() {
         <div className="modal">
           <div onClick={toggleModal} className="overlay"></div>
           <div className="Nav-modal-content">
-            <div id="mobile-profile" style={{ marginRight: "10vw" }}>
+            <div
+              id="mobile-profile"
+              style={{
+                marginBottom: "7vw",
+
+                display: "flex",
+                alignItems: "center",
+                borderBottom: "solid grey 1px",
+              }}
+            >
               <div>
                 <ProfileModal />
-                {Name}
               </div>
               <Dropdown />
             </div>
@@ -71,17 +83,58 @@ export default function NavModal() {
             </div>
             {activeSubMenu === "SnapShot" && (
               <>
-                <div className="Sub-nav-elements">
+                <div
+                  className={
+                    window.location.pathname.startsWith("/snapshot/1")
+                      ? "active Sub-nav-elements"
+                      : "Sub-nav-elements"
+                  }
+                  onClick={() => navigate("/snapshot/1")}
+                >
                   Total Active Personal Customers
                 </div>
-                <div className="Sub-nav-elements">
+
+                <div
+                  className={
+                    window.location.pathname.startsWith("/snapshot/2")
+                      ? "active Sub-nav-elements"
+                      : "Sub-nav-elements"
+                  }
+                  onClick={() => navigate("/snapshot/2")}
+                >
                   Inactive Enrollment Customers Last 30 days
                 </div>
-                <div className="Sub-nav-elements">
+                <div
+                  className={
+                    window.location.pathname.startsWith("/snapshot/3")
+                      ? "active Sub-nav-elements"
+                      : "Sub-nav-elements"
+                  }
+                  onClick={() => navigate("/snapshot/3")}
+                >
                   Active Subscribers in My Enrollment Tree{" "}
                 </div>
-                <div className="Sub-nav-elements">New Promoted Team Ranks </div>
-                <div className="Sub-nav-elements"> Raising Ranks Progress</div>
+                <div
+                  className={
+                    window.location.pathname.startsWith("/snapshot/4")
+                      ? "active Sub-nav-elements"
+                      : "Sub-nav-elements"
+                  }
+                  onClick={() => navigate("/snapshot/4")}
+                >
+                  New Promoted Team Ranks{" "}
+                </div>
+                <div
+                  className={
+                    window.location.pathname.startsWith("/snapshot/5")
+                      ? "active Sub-nav-elements"
+                      : "Sub-nav-elements"
+                  }
+                  onClick={() => navigate("/snapshot/5")}
+                >
+                  {" "}
+                  Raising Ranks Progress
+                </div>
               </>
             )}
 
@@ -93,10 +146,55 @@ export default function NavModal() {
             </div>
             {activeSubMenu === "Hot 100" && (
               <>
-                <div className="Sub-nav-elements">Top Enrollers</div>
-                <div className="Sub-nav-elements">Top Producers</div>
-                <div className="Sub-nav-elements">My Top Enrollers</div>
-                <div className="Sub-nav-elements"> My Top Producers</div>
+                <div
+                  className={
+                    window.location.pathname.startsWith("/hot-100/1")
+                      ? "active Sub-nav-elements"
+                      : "Sub-nav-elements"
+                  }
+                  onClick={() => {
+                    navigate("/hot-100/1");
+                  }}
+                >
+                  Top Enrollers
+                </div>
+                <div
+                  className={
+                    window.location.pathname.startsWith("/hot-100/2")
+                      ? "active Sub-nav-elements"
+                      : "Sub-nav-elements"
+                  }
+                  onClick={() => {
+                    navigate("/hot-100/2");
+                  }}
+                >
+                  Top Producers
+                </div>
+                <div
+                  className={
+                    window.location.pathname.startsWith("/hot-100/3")
+                      ? "active Sub-nav-elements"
+                      : "Sub-nav-elements"
+                  }
+                  onClick={() => {
+                    navigate("/hot-100/3");
+                  }}
+                >
+                  My Top Enrollers
+                </div>
+                <div
+                  className={
+                    window.location.pathname.startsWith("/hot-100/4")
+                      ? "active Sub-nav-elements"
+                      : "Sub-nav-elements"
+                  }
+                  onClick={() => {
+                    navigate("/hot-100/4");
+                  }}
+                >
+                  {" "}
+                  My Top Producers
+                </div>
               </>
             )}
 
@@ -114,17 +212,20 @@ export default function NavModal() {
 
             <div
               className="Nav-modal-Elements"
-              onClick={() => toggleSubMenu("Hall of Fame")}
+              onClick={() => {
+                toggleSubMenu("Hall of Fame");
+                navigate("hall-of-fame");
+              }}
             >
               Hall of Fame
             </div>
-            {activeSubMenu === "Hall of Fame" && (
+            {/* {activeSubMenu === "Hall of Fame" && (
               <>
                 <div className="Sub-nav-elements">
                   Sub-menu for Hall of Fame
                 </div>
               </>
-            )}
+            )} */}
 
             <div
               className="Nav-modal-Elements"
@@ -137,6 +238,7 @@ export default function NavModal() {
                 <div className="Sub-nav-elements">Sub-menu for Be Social</div>
               </>
             )}
+            <Logout className="Nav-modal-Elements" />
           </div>
         </div>
       )}

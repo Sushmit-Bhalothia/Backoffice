@@ -163,7 +163,8 @@ body.active-modal {
   background-color: var(--grey-f-2);
 }
 .Sub-nav-elements {
-  font-size: 1.5vh;
+  font-size: 3.4vw;
+  font-weight: 425;
   margin: 1.5vh 0.5vh;
 }
 
@@ -222,6 +223,9 @@ body.active-modal {
 #mobile-profile:hover {
   background-color: var(--grey-f-2);
 }
+#Nav-Searchbar {
+  display: none;
+}
 @media screen and (max-width: 600px) {
   #mobile-nav-logo {
     display: block;
@@ -243,8 +247,14 @@ body.active-modal {
     display: none;
   }
   .logoHeader {
-    margin-top: -1.25;
+    margin-top: -1vh;
     height: 8vw;
     width: 10vw;
+  }
+  #lang-navbar {
+    display: none;
+  }
+  #Nav-Searchbar {
+    display: block;
   }
 }

@@ -6,9 +6,9 @@ import Dropdown from "../sharedComponents/dropdown";
 import { useNavigate } from "react-router-dom";
 import ProfileModal from "./profilemodal";
 import MobileNavbar from "./mobile-navbar-modal";
+import SearchBar from "../Searchbar";
 function Navbar() {
   const navigate = useNavigate();
-  const Name = "Sushmit"; //from database
 
   return (
     <>
@@ -34,19 +34,19 @@ function Navbar() {
         </span>
         <span
           className={
-            window.location.pathname === "/snapshot"
+            window.location.pathname.startsWith("/snapshot")
               ? "active headerText"
               : "headerText"
           }
           onClick={() => {
             //  setActivePage("/snapshot");
-            navigate("/snapshot");
+            navigate("/snapshot/1");
           }}
         >
           SnapShot
           <div
             className={
-              window.location.pathname === "/snapshot"
+              window.location.pathname.startsWith("/snapshot")
                 ? "underline_a"
                 : "headerText"
             }
@@ -55,7 +55,7 @@ function Navbar() {
         <span
           c
           className={
-            window.location.pathname === "/hot-100"
+            window.location.pathname.startsWith("/hot-100")
               ? "active headerText"
               : "headerText"
           }
@@ -67,7 +67,7 @@ function Navbar() {
           Hot 100
           <div
             className={
-              window.location.pathname === "/hot-100"
+              window.location.pathname.startsWith("/hot-100")
                 ? "underline_a"
                 : "headerText"
             }
@@ -133,16 +133,18 @@ function Navbar() {
             }
           ></div>
         </span>
-
-        <Dropdown />
+        <div id="lang-navbar">
+          <Dropdown />
+        </div>
         <div style={{ display: "flex", flexDirection: "column" }}>
           <div className="profile">
-            {Name}
-
             <ProfileModal />
           </div>
         </div>
         {/* <div id="mobile-nav-logo"></div> */}
+        <div id="Nav-Searchbar">
+          <SearchBar />
+        </div>
         <MobileNavbar />
       </div>
       {/* <div className="MobileHeader">
