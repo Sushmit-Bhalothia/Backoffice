@@ -24,7 +24,8 @@ function SetUpProfile() {
             here is the content */}
         </div>
         <div
-          id="my-superset-container"
+          // id="my-superset-container"
+
           style={{ height: "82vh" }}
           className="Rectangle-1092"
         >

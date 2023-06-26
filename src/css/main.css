@@ -16,13 +16,12 @@
   /* height: 70vh; */
 }
 .navi {
-  width: 20%;
   align-items: center;
   justify-content: center;
   /* margin-left: 0vw; */
   padding-top: 30vh;
   width: 17vw;
-  height: 90vh;
+  height: 70vh;
   flex-grow: 0;
 
   /* padding: 25vh 24px 40px 0px; */
@@ -34,11 +33,13 @@
   height: 90vh;
 }
 iframe {
-  width: 200vw;
-  height: 120vh;
+  width: 83vw;
+  height: 100vh;
   padding: 0vh;
   border: none;
-  margin-top: -18vh;
+  margin: 0;
+
+  /* margin-top: -18vh; */
 }
 .side-nav-elements {
   width: 15vw;
@@ -64,4 +65,12 @@ iframe {
 }
 .active {
   color: var(--deeper-purple);
+}
+@media screen and (max-width: 600px) {
+  .navi {
+    display: none;
+  }
+  iframe {
+    width: 100vw;
+  }
 }

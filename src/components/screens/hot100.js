@@ -109,12 +109,9 @@ function Hot100() {
           My Top Producers
         </div>
       </div>
-      {/* <div id="dashboard">
+      <div id="dashboard">
         {" "}
-        <Embed />
-    //  </div> */}
-      <div>
-        <h1>Hot 100</h1>
+        <Embed id={process.env.REACT_APP_ID} />
       </div>
     </div>
   );

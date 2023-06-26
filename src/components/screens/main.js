@@ -1,18 +1,5 @@
+import Embed from "../screens/embed";
 function Main() {
-  return (
-    <div>
-      <h1
-        style={{
-          height: "45vh",
-          display: "flex",
-          textAlign: "center",
-          justifyContent: "center",
-          marginTop: "20vh",
-        }}
-      >
-        Dashboard
-      </h1>
-    </div>
-  );
+  return <Embed id={process.env.REACT_APP_ID} />;
 }
 export default Main;

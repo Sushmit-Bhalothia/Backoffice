@@ -5,6 +5,7 @@ import ae from "../../lib/Be_logo.png";
 import Dropdown from "../sharedComponents/dropdown";
 import { useNavigate } from "react-router-dom";
 import ProfileModal from "./profilemodal";
+import MobileNavbar from "./mobile-navbar-modal";
 function Navbar() {
   const navigate = useNavigate();
   const Name = "Sushmit"; //from database
@@ -141,6 +142,8 @@ function Navbar() {
             <ProfileModal />
           </div>
         </div>
+        {/* <div id="mobile-nav-logo"></div> */}
+        <MobileNavbar />
       </div>
       {/* <div className="MobileHeader">
         <div className="logoHeader"></div>

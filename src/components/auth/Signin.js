@@ -53,7 +53,7 @@ function Signin() {
             </div>
             <div>
               <div className="Agreements-Section2">
-                Be Backoffice ™ 2021. All rights reserved
+                Be Backoffice ™ 2023. All rights reserved
               </div>
             </div>
           </div>
