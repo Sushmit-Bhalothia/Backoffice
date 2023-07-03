@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 import Dropdown from "../sharedComponents/dropdown";
 import ImageSelector from "./imageSelector";
 import Comp from "../onboarding/comp";
+import RightsAgree from "../auth/RightsAgreement";
+import PolicySection from "../auth/PolicySection";
 
 function SocialMedia() {
   const navigate = useNavigate();
@@ -14,12 +16,9 @@ function SocialMedia() {
       <div
         className="outer"
         style={{
-          // margin: "auto",
-          // marginLeft: "10vw",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
-          // alignItems: "center",
         }}
       >
         <div id="mobile-logo" style={{ height: "25vh" }}>
@@ -69,9 +68,9 @@ function SocialMedia() {
             id="phone"
           />
 
-          <div className="signInConponents " style={{ display: "flex" }}>
+          <div className="signInConponents ">
             <span
-              style={{ cursor: "pointer", fontSize: "2vh" }}
+              style={{ cursor: "pointer", fontSize: "2vh", marginTop: "1vh" }}
               onClick={() => {
                 navigate("/welcome");
               }}
@@ -90,14 +89,9 @@ function SocialMedia() {
           </div>
         </div>
         <div className="Lower" style={{ paddingTop: "4vh" }}>
-          <div className="Agreements-Section">
-            <span>Privacy Policy</span>
-            <span>Terms of Use</span>
-          </div>
+          <PolicySection />
           <div>
-            <div className="Agreements-Section2">
-              Be Backoffice ™ 2021. All rights reserved
-            </div>
+            <RightsAgree />
           </div>
         </div>
       </div>

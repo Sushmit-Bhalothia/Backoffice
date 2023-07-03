@@ -14,27 +14,6 @@ function EmailSentModal() {
           Please, enter the email address you used to create your Be account and
           you will receive a password recovery link{" "}
         </p>
-
-        {/* <label className="Label" htmlFor="loginId">
-          Login ID
-        </label>
-
-        <input
-          placeholder="User Name or Email"
-          className="Input"
-          type="text"
-          id="loginId"
-        /> */}
-
-        {/* <label className="Label" htmlFor="password">
-          Password
-        </label> */}
-        {/* <input
-          placeholder="Your Password Here "
-          className="Input"
-          type="password"
-          id="password"
-        /> */}
       </div>
       <div className="signInConponents " style={{ display: "flex" }}>
         <button
@@ -46,15 +25,6 @@ function EmailSentModal() {
         >
           Great !
         </button>
-        {/* <span
-          style={{ cursor: "pointer" }}
-          onClick={() => {
-            navigate("/forgot-password");
-          }}
-        >
-          {" "}
-          Cancel
-        </span> */}
       </div>
     </div>
   );

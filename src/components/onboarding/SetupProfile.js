@@ -2,6 +2,8 @@ import "../../css/auth-onboarding/index.css";
 import Logo from "../router/logo";
 import { useNavigate } from "react-router-dom";
 import Dropdown from "../sharedComponents/dropdown";
+import RightsAgree from "../auth/RightsAgreement";
+import PolicySection from "../auth/PolicySection";
 
 function SetUpProfile() {
   const navigate = useNavigate();
@@ -112,14 +114,9 @@ function SetUpProfile() {
           </div>
         </div>
         <div className="Lower" style={{ paddingTop: "4vh" }}>
-          <div className="Agreements-Section">
-            <span>Privacy Policy</span>
-            <span>Terms of Use</span>
-          </div>
+          <PolicySection />
           <div>
-            <div className="Agreements-Section2">
-              Be Backoffice ™ 2021. All rights reserved
-            </div>
+            <RightsAgree />
           </div>
         </div>
       </div>

@@ -132,7 +132,7 @@ body.active-modal {
 
   position: absolute;
   top: 25vh;
-  right: -6vw;
+  right: -9vw;
 
   transform: translate(-50%, -50%);
   line-height: 1.4;
@@ -140,7 +140,7 @@ body.active-modal {
   border-radius: 3px;
   /* max-width: 600px;
   min-width: 300px; */
-  width: 15vw;
+  width: 18vw;
 
   border-radius: 8px;
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1);

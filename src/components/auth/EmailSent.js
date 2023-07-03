@@ -1,7 +1,8 @@
 import "../../css/auth-onboarding/index.css";
 import Logo from "../router/logo";
 import { Suspense } from "react";
-// import ForgotPasswordForm from "../screens/forgotpasswordform";
+import RightsAgree from "./RightsAgreement";
+import PolicySection from "./PolicySection";
 import EmailSentModal from "./EmailSentModal";
 import Dropdown from "../sharedComponents/dropdown";
 function EmailSent() {
@@ -12,33 +13,21 @@ function EmailSent() {
         <div
           className="outer"
           style={{
-            // margin: "auto",
-            // marginLeft: "10vw",
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
-            // alignItems: "center",
           }}
         >
-          <div id="mobile-logo" style={{ height: "25vh" }}>
-            {/* //{" "}
-            here is the content */}
-          </div>
+          <div id="mobile-logo" style={{ height: "25vh" }}></div>
           <div class="overlay-span-1">
-            {/* <img src="" alt=" " /> */}
             <Dropdown />
           </div>
           <span class="overlay-span-2">Contact Support</span>
           <EmailSentModal />
           <div className="Lower" style={{ paddingTop: "4vh" }}>
-            <div className="Agreements-Section">
-              <span>Privacy Policy</span>
-              <span>Terms of Use</span>
-            </div>
+            <PolicySection />
             <div>
-              <div className="Agreements-Section2">
-                Be Backoffice ™ 2021. All rights reserved
-              </div>
+              <RightsAgree />
             </div>
           </div>
         </div>

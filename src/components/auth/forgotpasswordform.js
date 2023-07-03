@@ -23,18 +23,8 @@ function ForgotForm() {
           type="text"
           id="loginId"
         />
-
-        {/* <label className="Label" htmlFor="password">
-          Password
-        </label> */}
-        {/* <input
-          placeholder="Your Password Here "
-          className="Input"
-          type="password"
-          id="password"
-        /> */}
       </div>
-      <div className="signInConponents " style={{ display: "flex" }}>
+      <div className="signInConponents ">
         <button
           className="Button"
           onClick={() => {
