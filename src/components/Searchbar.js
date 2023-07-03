@@ -15,9 +15,11 @@ function SearchBar() {
         alignItems: "center",
         marginTop: "-2vh",
         marginLeft: "-10vw",
+        // width: "30vw",
       }}
     >
       <input
+        style={{ height: "5vh" }}
         className="Input"
         type="text"
         placeholder=" 🔍 Search by name or ID"
