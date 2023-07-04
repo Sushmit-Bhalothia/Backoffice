@@ -8,7 +8,7 @@ function Snapshot4() {
     {
       customerId: 1,
       name: "John",
-      achievedRank: "Gold",
+      achievedRank: ["Gold", " silver"],
       directSponsor: "Jane",
       enrollmentLevel: 2,
     },

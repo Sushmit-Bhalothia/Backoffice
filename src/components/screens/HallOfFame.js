@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useCallback } from "react";
 import "../../css/main.css";
+import SearchBar from "../Searchbar";
 import Card from "./hall-of-fame_Card";
 
 function HallFame() {
@@ -64,7 +65,13 @@ function HallFame() {
 
   return (
     <div id="hall-of-fame">
-      <h1>Hall of fame</h1>
+      <div className="content-heading">
+        <h1>Hall of fame</h1>
+        <SearchBar style={{ width: "40vw" }} />
+      </div>
+      <div className="content-subheading">
+        This page contains little description of the page
+      </div>
       <div className="card-container">{renderCards()}</div>
     </div>
   );

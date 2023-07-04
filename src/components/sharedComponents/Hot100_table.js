@@ -20,15 +20,14 @@ const TableComponent = ({ data }) => {
 
   return (
     <div>
-      <table style={{ width: "100%", borderCollapse: "collapse" }}>
+      <table style={{ width: "80vw", borderCollapse: "collapse" }}>
         <thead>
           <tr>
+            <th style={{ border: "none" }}>Position</th>
             <th style={{ border: "none" }}>Customer ID</th>
             <th style={{ border: "none" }}>Name</th>
-            <th style={{ border: "none" }}>Achieved Rank</th>
-            <th style={{ border: "none" }}>Direct Sponsor</th>
-            <th style={{ border: "none" }}>Enrollment Level</th>
-            <th style={{ border: "none" }}>View Profile</th>
+            <th style={{ border: "none" }}>Paid Rank</th>
+            <th style={{ border: "none" }}>Country</th>
           </tr>
         </thead>
         <tbody style={{ textAlign: "center" }}>
@@ -41,22 +40,10 @@ const TableComponent = ({ data }) => {
               }}
             >
               <td>{entry.customerId}</td>
-              <td>
-                {" "}
-                {}
-                {entry.name}
-              </td>
+              <td>{entry.name}</td>
               <td>{entry.achievedRank}</td>
               <td>{entry.directSponsor}</td>
               <td>{entry.enrollmentLevel}</td>
-              <td>
-                <button
-                  className="Smaller-Button"
-                  onClick={() => handleViewProfile(entry.customerId)}
-                >
-                  View
-                </button>
-              </td>
             </tr>
           ))}
         </tbody>

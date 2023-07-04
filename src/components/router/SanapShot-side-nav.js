@@ -66,7 +66,7 @@ function SideNav() {
           navigate("/snapshot/5");
         }}
       >
-        raising rank progress
+        Raising rank progress
       </div>
     </div>
   );

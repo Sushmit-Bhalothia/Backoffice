@@ -14,6 +14,8 @@ const FilterDropdown = () => {
         style={{
           border: "none",
           paddingTop: "1vh",
+          paddingRight: "0.5vw",
+          fontSize: "2vh",
           textAlign: "center",
         }}
         value={selectedFilter}

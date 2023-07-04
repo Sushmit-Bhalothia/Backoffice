@@ -1,63 +1,37 @@
 import React, { useState } from "react";
-import "../../css/main.css";
+import "../.././css/main.css";
 
-const DateRangeDropdown = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [startDate, setStartDate] = useState("17 April");
-  const [endDate, setEndDate] = useState("18 May (2023)");
+const FilterDropdown = () => {
+  const [selectedFilter, setSelectedFilter] = useState(
+    "Cycle: 14 May to 15 June(2023)"
+  );
 
-  const handleDropdownClick = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const handleStartDateChange = (event) => {
-    setStartDate(event.target.value);
-  };
-
-  const handleEndDateChange = (event) => {
-    setEndDate(event.target.value);
+  const handleChange = (event) => {
+    setSelectedFilter(event.target.value);
   };
 
   return (
     <div style={{ display: "flex" }}>
-      <div>
-        <button
-          className="Trans-Button"
-          style={{ backgroundColor: "white", color: "black", border: "none" }}
-          onClick={handleDropdownClick}
+      <div style={{ marginTop: "0.0vh" }} className="Trans-Button">
+        <select
+          style={{
+            border: "none",
+            paddingTop: "1vh",
+            paddingRight: "0.5vw",
+            fontSize: "2vh",
+            textAlign: "center",
+          }}
+          value={selectedFilter}
+          onChange={handleChange}
         >
-          Cycle
-        </button>
-        {isOpen && (
-          <div className="dropdown-content">
-            <div className="calendar">
-              <div>
-                <label htmlFor="start-date">Start Date:</label>
-                <input
-                  type="date"
-                  id="start-date"
-                  value={startDate}
-                  onChange={handleStartDateChange}
-                />
-              </div>
-              <div>
-                <label htmlFor="end-date">End Date:</label>
-              </div>
-              <input
-                type="date"
-                id="end-date"
-                value={endDate}
-                onChange={handleEndDateChange}
-              />
-            </div>
-          </div>
-        )}
+          <option value="Cycle: 14 May to 15 June(2022)">Cycle </option>
+          <option value="Cycle 2: 14 June to 15 July(2022)">Cycle 2 </option>
+          <option value="Cycle 3: 14 July to 15 August(2022)">Cycle 3</option>
+        </select>
       </div>
-      <div className="root-filters selected-cycle">
-        Cycle: {startDate} to {endDate}
-      </div>
+      <div className="root-filters selected-cycle">{selectedFilter}</div>
     </div>
   );
 };
 
-export default DateRangeDropdown;
+export default FilterDropdown;

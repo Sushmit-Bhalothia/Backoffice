@@ -1,14 +1,19 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFilter, faColumns } from "@fortawesome/free-solid-svg-icons";
+import { faFilter, faTable, faBars } from "@fortawesome/free-solid-svg-icons";
 import FilterDropdown from "./filtersDropdown";
 import CycleDropDown from "./cycle-dropdown";
 
 function Filter() {
   const [isFilterActive, setIsFilterActive] = useState(false);
+  const [displayMode, setDisplayMode] = useState("table");
 
   const handleFilterToggle = () => {
     setIsFilterActive(!isFilterActive);
+  };
+
+  const handleDisplayModeChange = (mode) => {
+    setDisplayMode(mode);
   };
 
   return (
@@ -37,7 +42,6 @@ function Filter() {
             icon={faFilter}
             style={{
               marginRight: "0.5rem",
-
               color: isFilterActive ? "#5d01a2" : "black",
             }}
           />
@@ -46,8 +50,25 @@ function Filter() {
         <div className="root-filters">Sort by:</div>
         <FilterDropdown />
       </div>
-      <div style={{ marginTop: "4.5vh" }} className="root-filters">
-        <FontAwesomeIcon icon={faColumns} />
+      <div
+        style={{ marginTop: "4.5vh", cursor: "pointer" }}
+        className="root-filters"
+        onClick={() => handleDisplayModeChange("cards")}
+      >
+        <FontAwesomeIcon
+          icon={faTable}
+          style={{ color: displayMode === "cards" ? "#5d01a2" : "black" }}
+        />
+      </div>
+      <div
+        style={{ marginTop: "4.5vh", cursor: "pointer" }}
+        className="root-filters"
+        onClick={() => handleDisplayModeChange("table")}
+      >
+        <FontAwesomeIcon
+          icon={faBars}
+          style={{ color: displayMode === "table" ? "#5d01a2" : "black" }}
+        />
       </div>
     </div>
   );

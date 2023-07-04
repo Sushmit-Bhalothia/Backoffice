@@ -61,7 +61,7 @@ function Navbar() {
           }
           onClick={() => {
             //setActivePage("/hot-100");
-            navigate("/hot-100");
+            navigate("/hot-100/1");
           }}
         >
           Hot 100
