@@ -136,12 +136,64 @@ iframe {
 .pagination {
   text-align: center;
 }
+.card {
+  width: 27vw;
+  display: flex;
+  height: 25vh;
+  margin: 1vw;
+  font-family: Montserrat;
+  font-size: 2vh;
 
-@media screen and (max-width: 600px) {
+  display: inline-flex;
+
+  border-radius: 2vh;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1);
+  background-color: var(--white);
+}
+.card-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 1vw;
+}
+
+.card-heading {
+}
+.card-position {
+  color: var(--main-purple);
+}
+.card-date {
+}
+#hall-of-fame {
+  width: 90vw;
+
+  margin: auto;
+}
+
+@media screen and (max-width: 1050px) {
   .navi {
     display: none;
   }
   iframe {
     width: 100vw;
+  }
+  .card {
+    width: 40vw;
+    font-size: 2.5vh;
+    height: 28vh;
+  }
+}
+@media screen and (max-width: 600px) {
+  .card {
+    width: 90vw;
+    font-size: 2.25vh;
+    height: 32vh;
+  }
+  #card-img {
+    width: 30vw;
+  }
+  #hall-of-fame {
+    width: 90vw;
+    margin: auto;
   }
 }

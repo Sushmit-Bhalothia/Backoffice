@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../../css/headerFooter.css";
-import ae from "../../lib/Be_logo.png";
+import ae from "../../lib/profile.jpeg";
 
 export default function ProfileModal() {
   const Name = "Sushmit";
@@ -25,8 +25,8 @@ export default function ProfileModal() {
         <img
           style={{
             height: "3.0vh",
-            widhth: " 3wh",
-            marginLeft: "0.5vw",
+            widhth: " 2wh",
+            marginRight: "0.5vw",
             borderRadius: "100%",
           }}
           src={ae}

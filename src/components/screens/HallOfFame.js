@@ -1,134 +1,73 @@
+import React, { useEffect, useState, useCallback } from "react";
 import "../../css/main.css";
-import React, { useState } from "react";
+import Card from "./hall-of-fame_Card";
 
-import Embed from "../screens/embed";
-
-const fetchGuestToken = async () => {
-  // For now, manually giving the token
-  return "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjp7ImZpcnN0X25hbWUiOiJTdXNobWl0IiwidXNlcm5hbWUiOiJzdXNobWl0IiwibGFzdF9uYW1lIjoiQmhhbG90aGlhIn0sInJlc291cmNlcyI6W3siaWQiOiIzODMyNjZmMi04M2JkLTRhNmEtODQzMi1iZjIyY2YwODA2YjEiLCJ0eXBlIjoiZGFzaGJvYXJkIn1dLCJybHNfcnVsZXMiOltdLCJpYXQiOjE2ODczNDU2OTkuOTcxNTA2NCwiZXhwIjoxNjg3MzQ1OTk5Ljk3MTUwNjQsImF1ZCI6Imh0dHA6Ly8wLjAuMC4wOjgwODAvIiwidHlwZSI6Imd1ZXN0In0.4Cz7gxrAJrGys_M7xBjvMVRrdFsCl-nsZV2e1XNhyQk";
-};
 function HallFame() {
-  const [activePage, setActivePage] = useState("2");
-  // useEffect(() => {
-  //   const loadDashboard = async () => {
-  //     const guestToken = await fetchGuestToken();
+  const [cardsData, setCardsData] = useState([
+    "ram",
+    "shyam",
+    "john",
+    "jane",
+    "max",
+    "john",
+    "jane",
+    "max",
+    "ram",
+    "jane",
+    "shyam",
+    "john",
+    "jane",
+    "max",
+    "john",
+    "jane",
+    "max",
+  ]);
+  const [cardsPerRow, setCardsPerRow] = useState(1);
 
-  //     embedDashboard({
-  //       id: process.env.REACT_APP_ID,
-  //       supersetDomain: process.env.REACT_APP_URL,
-  //       mountPoint: document.getElementById("dashboard"),
-  //       dashboardUiConfig: {
-  //         hideTitle: true,
-  //         hideChartControls: true,
-  //         filters: {
-  //           visible: false,
-  //         },
-  //       },
-  //       iframeAttributes: {
-  //         id: "my-test-frame",
-  //         className: "my-test-frame-class",
-  //       },
-  //       fetchGuestToken: () => Promise.resolve(guestToken),
-  //     });
-  //   };
+  const updateCardsPerRow = useCallback(() => {
+    const screenWidth = window.innerWidth;
 
-  //   loadDashboard();
-  // }, []);
-  let dashboardId;
-  if (activePage === "1") {
-    dashboardId = process.env.REACT_APP_ID; // Replace with the first dashboard ID
-  } else {
-    dashboardId = process.env.REACT_APP_ID2; // Replace with the second dashboard ID
-  }
+    if (screenWidth >= 1050) {
+      setCardsPerRow(3);
+    } else if (screenWidth >= 600) {
+      setCardsPerRow(2);
+    } else {
+      setCardsPerRow(1);
+    }
+  }, []);
+
+  useEffect(() => {
+    updateCardsPerRow();
+    window.addEventListener("resize", updateCardsPerRow);
+    return () => {
+      window.removeEventListener("resize", updateCardsPerRow);
+    };
+  }, [updateCardsPerRow]);
+
+  const renderCards = () => {
+    const rows = [];
+    const totalCards = cardsData.length;
+
+    for (let i = 0; i < totalCards; i += cardsPerRow) {
+      const row = cardsData
+        .slice(i, i + cardsPerRow)
+        .map((card, index) => <Card key={index} data={card} />);
+      rows.push(
+        <div className="card-row" key={i}>
+          {row}
+        </div>
+      );
+    }
+
+    return rows;
+  };
 
   return (
-    <div className="outer">
-      {/* <Helmet>
-        <style type="text/css">{`
-          iframe {
-            height: 65vh !important;
-            width: 80vw !important
-            margin-top: -17vh;
-            border: none;
-            padding-bottom: -20vh;
-          }
-          body {
-            background-color: white;
-          }
-        `}</style>
-      </Helmet> */}
-      <div className="navi">
-        <div
-          className={
-            activePage === "1"
-              ? "active side-nav-elements"
-              : "side-nav-elements"
-          }
-          onClick={() => {
-            setActivePage("1");
-          }}
-        >
-          Total active Personals Customers
-        </div>
-        <div
-          className={
-            activePage === "2"
-              ? "active side-nav-elements"
-              : "side-nav-elements"
-          }
-          onClick={() => {
-            setActivePage("2");
-          }}
-        >
-          Inactive Enrollment Customers Last 30 Days
-        </div>
-        <div
-          className={
-            activePage === "3"
-              ? "active side-nav-elements"
-              : "side-nav-elements"
-          }
-          onClick={() => {
-            setActivePage("3");
-          }}
-        >
-          {" "}
-          Active Subscribers In My Enrollment Tree
-        </div>
-        <div
-          className={
-            activePage === "4"
-              ? "active side-nav-elements"
-              : "side-nav-elements"
-          }
-          onClick={() => {
-            setActivePage("4");
-          }}
-        >
-          {" "}
-          New Promoted Team Ranks
-        </div>
-        <div
-          className={
-            activePage === "5"
-              ? "active side-nav-elements"
-              : "side-nav-elements"
-          }
-          onClick={() => {
-            setActivePage("5");
-          }}
-        >
-          raising rank progress
-        </div>
-      </div>
-      {/* <div id="dashboard">
-        {" "}
-        <Embed />
-    //  </div> */}
-      <div>
-        <h1>Hall of fame</h1>
-      </div>
+    <div id="hall-of-fame">
+      <h1>Hall of fame</h1>
+      <div className="card-container">{renderCards()}</div>
     </div>
   );
 }
+
 export default HallFame;
