@@ -20,7 +20,8 @@ function SearchBar() {
     >
       <input
         style={{ height: "5vh" }}
-        className="Input"
+        // className="Input"
+        className="searchbar"
         type="text"
         placeholder=" 🔍 Search by name or ID"
         value={searchTerm}

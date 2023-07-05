@@ -43,7 +43,9 @@ function Filter() {
           />
           Filter
         </div>
-        <div className="root-filters">Sort by:</div>
+        <div className="root-filters" style={{ marginTop: "2.25vh" }}>
+          Sort by:
+        </div>
         <FilterDropdown />
       </div>
       <div style={{ marginTop: "4.5vh" }} className="root-filters">

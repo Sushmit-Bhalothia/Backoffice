@@ -153,9 +153,21 @@
   text-align: left;
   cursor: pointer;
   color: var(--text-black);
-
-  /* Add any other styles for the spans */
 }
+.searchbar {
+  flex-grow: 0;
+  /* margin: 32px 10px 4px 57px; */
+  padding: 1px;
+  text-align: center;
+  border: none;
+  width: 20vw;
+  margin-right: 2vw;
+  border-radius: 100px;
+  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.2);
+  background-color: var(--white);
+}
+/* Add any other styles for the spans */
+
 .overlay-span-2 {
   position: absolute;
   top: 1vw;

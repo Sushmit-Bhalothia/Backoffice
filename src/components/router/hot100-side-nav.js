@@ -1,10 +1,10 @@
 import "../../css/main.css";
-import React, { useState } from "react";
+
 import { useNavigate } from "react-router-dom";
 
 function Hot100_Sidebar() {
   const navigate = useNavigate();
-  const [activePage, setActivePage] = useState("2");
+
   return (
     <div className="navi">
       <div

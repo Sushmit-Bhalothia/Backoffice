@@ -124,6 +124,7 @@ iframe {
   background-color: var(--grey-f-2);
   color: var(--grey-82);
 }
+
 .Trans-Button {
   box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.2);
   background-color: var(--white);
@@ -136,6 +137,7 @@ iframe {
 }
 .pagination {
   text-align: center;
+  margin-top: 1vh;
 }
 .card {
   width: 27vw;
@@ -223,6 +225,16 @@ iframe {
   width: 90vw;
 
   margin: auto;
+}
+.each {
+  height: 5vh;
+  padding-top: 1vh;
+  padding-left: 1vw;
+  border-radius: 4px;
+  margin: 1vh;
+}
+.each:hover {
+  background-color: var(--grey-f-2);
 }
 
 @media screen and (max-width: 1050px) {

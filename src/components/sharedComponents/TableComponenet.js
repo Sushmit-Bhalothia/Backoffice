@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const TableComponent = ({ data }) => {
   const [currentPage, setCurrentPage] = useState(1);
-  const entriesPerPage = 10;
+  const entriesPerPage = 9;
   const totalPages = Math.ceil((data?.length || 0) / entriesPerPage);
   const startIndex = (currentPage - 1) * entriesPerPage;
   const endIndex = startIndex + entriesPerPage;
@@ -37,7 +37,7 @@ const TableComponent = ({ data }) => {
               key={entry.customerId}
               style={{
                 backgroundColor: index % 2 === 0 ? "#fdfaff" : "white",
-                height: "6vh",
+                height: "5.5vh",
               }}
             >
               <td>{entry.customerId}</td>
@@ -70,6 +70,7 @@ const TableComponent = ({ data }) => {
             border: "none",
             margin: "0.125vw",
             fontWeight: "bold",
+            margin: "1.25vh",
           }}
         >
           Previous

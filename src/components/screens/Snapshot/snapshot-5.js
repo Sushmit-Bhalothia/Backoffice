@@ -1,6 +1,4 @@
-import Embed from "../../screens/embed";
-
-function Snapshot3() {
-  return <Embed id={process.env.REACT_APP_ID} />;
+function Snapshot2() {
+  return <></>;
 }
-export default Snapshot3;
+export default Snapshot2;

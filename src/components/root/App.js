@@ -27,8 +27,8 @@ import Analtics from "../screens/analytic";
 import Protected from "../protected";
 import ScreeNotFound from "../router/404";
 import Embed from "../screens/embed";
-import SnapshotSideNav from "../router/SanapShot-side-nav";
-import Hot100_Sidebar from "../router/hot100-side-nav";
+import SnapshotSideNav from "../router/optionalsidebar";
+import Hot100_Sidebar from "../router/hot100_sidebar";
 
 function App() {
   const [isSignedIn, setIsSignedIn] = useState(true);

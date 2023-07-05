@@ -9,7 +9,10 @@ const FilterDropdown = () => {
   };
 
   return (
-    <div style={{ marginTop: "1vh" }} className="Trans-Button">
+    <div
+      style={{ marginTop: "1vh", paddingleft: "2vw", paddingRight: "1vw" }}
+      className="Trans-Button"
+    >
       <select
         style={{
           border: "none",
@@ -17,6 +20,8 @@ const FilterDropdown = () => {
           paddingRight: "0.5vw",
           fontSize: "2vh",
           textAlign: "center",
+
+          // padding
         }}
         value={selectedFilter}
         onChange={handleChange}
