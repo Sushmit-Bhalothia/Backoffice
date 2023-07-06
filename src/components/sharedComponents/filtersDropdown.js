@@ -14,11 +14,12 @@ const FilterDropdown = () => {
       className="Trans-Button"
     >
       <select
+        id="select-filter"
         style={{
           border: "none",
           paddingTop: "1vh",
           paddingRight: "0.5vw",
-          fontSize: "2vh",
+          // fontSize: "2vh",
           textAlign: "center",
 
           // padding

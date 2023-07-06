@@ -23,7 +23,7 @@ const TableComponent = ({ data }) => {
       <table style={{ width: "100%", borderCollapse: "collapse" }}>
         <thead>
           <tr>
-            <th style={{ border: "none" }}>Customer ID</th>
+            <th style={{ border: "none", padding: "2vh" }}>Customer ID</th>
             <th style={{ border: "none" }}>Name</th>
             <th style={{ border: "none" }}>Achieved Rank</th>
             <th style={{ border: "none" }}>Direct Sponsor</th>

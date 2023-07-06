@@ -14,9 +14,7 @@ function Filter() {
   return (
     <div className="Filters">
       <div className="left-Filter">
-        <div style={{ marginTop: "3vh" }} className="root-filters">
-          Show:
-        </div>
+        <div className="root-filters root-filters-text">Show:</div>
         <div className="root-filters">
           <CycleDropDown />
         </div>
@@ -43,13 +41,13 @@ function Filter() {
           />
           Filter
         </div>
-        <div className="root-filters" style={{ marginTop: "2.25vh" }}>
+        <div style={{ marginTop: "1.85vh" }} className="root-filters ">
           Sort by:
         </div>
         <FilterDropdown />
-      </div>
-      <div style={{ marginTop: "4.5vh" }} className="root-filters">
-        <FontAwesomeIcon icon={faColumns} />
+        <div id="column-selector" className="root-filters">
+          <FontAwesomeIcon icon={faColumns} />
+        </div>
       </div>
     </div>
   );

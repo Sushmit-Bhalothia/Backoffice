@@ -61,7 +61,7 @@ function Snapshot1() {
       type: ["learn", "live", "live"],
       subscription: ["gold", "silver", "gold"],
       enrollmentDate: ["15 Jan 2023", "15  Feb 2023", "15 April 2023"],
-      expiringIn: ["16 Feb 2023", "15 April 2023", "16  Aug 2023"],
+      expiringIn: ["16 Feb 2023", "15 Apr 2023", "16  Aug 2023"],
       autoRenewal: ["OFF", "ON", "OFF"],
       email: ["janegreat@gamil.com"],
     },
@@ -121,7 +121,7 @@ function Snapshot1() {
       type: ["learn", "live", "live"],
       subscription: ["gold", "silver", "gold"],
       enrollmentDate: ["15 jan 2023", "15  Feb 2023", "15 april 2023"],
-      expiringIn: ["16 Feb 2023", "15 april 2023", "16  aug 2023"],
+      expiringIn: ["16 Feb 2023", "15 Apr 2023", "16  Aug 2023"],
       autoRenewal: ["OFF", "ON", "OFF"],
       email: ["janegreat@gamil.com"],
     },
@@ -131,7 +131,9 @@ function Snapshot1() {
     <div>
       <div className="content-heading">
         <h3> New Promoted Team Ranks</h3>
-        <SearchBar style={{ width: "40vw" }} />
+        <div id="BodyFilter">
+          <SearchBar style={{ width: "40vw" }} />
+        </div>
       </div>
       <div className="content-subheading">
         This report contains your team ranks info or your enrolment tree

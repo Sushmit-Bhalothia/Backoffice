@@ -172,11 +172,13 @@ body.active-modal {
 .Footer {
   width: 100vw;
   height: 12vh;
+
   /* margin: 16px 0 0; */
   padding: 4vh 0px 2vh;
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1);
   background-color: var(--white);
 }
+
 .Be-Backoffice-2023 {
   /* margin: auto; */
   width: 100vw;
@@ -213,6 +215,9 @@ body.active-modal {
   color: var(--black);
   cursor: pointer;
 }
+.FooterText {
+  font-size: 0.9vw;
+}
 #mobile-profile {
   display: flex;
   padding: 0 2vw;
@@ -228,6 +233,11 @@ body.active-modal {
   display: none;
 }
 @media screen and (max-width: 600px) {
+  .FooterText {
+    font-size: 2.25vw;
+    margin-top: 1vh;
+    /* margin-right: 1vh; */
+  }
   #mobile-nav-logo {
     display: block;
     height: 9vh;

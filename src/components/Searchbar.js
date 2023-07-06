@@ -19,7 +19,6 @@ function SearchBar() {
       }}
     >
       <input
-        style={{ height: "5vh" }}
         // className="Input"
         className="searchbar"
         type="text"

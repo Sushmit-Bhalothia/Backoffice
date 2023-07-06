@@ -1,8 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const TableComponent = ({ data }) => {
   const [currentPage, setCurrentPage] = useState(1);
-  const entriesPerPage = 6;
+  const [entriesPerPage, setEntriesPerPage] = useState(
+    window.innerWidth < 600 ? 12 : 6
+  );
+
+  useEffect(() => {
+    const handleResize = () => {
+      setEntriesPerPage(window.innerWidth < 600 ? 12 : 6);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   const totalPages = Math.ceil((data?.length || 0) / entriesPerPage);
   const startIndex = (currentPage - 1) * entriesPerPage;
   const endIndex = startIndex + entriesPerPage;
@@ -20,23 +35,17 @@ const TableComponent = ({ data }) => {
 
   return (
     <div>
-      <table
-        style={{
-          width: "82vw",
-          borderCollapse: "collapse",
-          fontFamily: "Montserrat",
-        }}
-      >
+      <table className="table">
         <thead>
           <tr style={{ textAlign: "left" }}>
-            <th style={{ border: "none", padding: "2vh" }}> ID</th>
-            <th style={{ border: "none", padding: "2vh" }}>Name</th>
-            <th style={{ border: "none", padding: "2vh" }}>Type</th>
-            <th style={{ border: "none", padding: "2vh" }}>Subscription</th>
-            <th style={{ border: "none", padding: "2vh" }}>Enrollment Date</th>
-            <th style={{ border: "none", padding: "2vh" }}>Expiring In</th>
-            <th style={{ border: "none", padding: "2vh" }}>Renewal</th>
-            <th style={{ border: "none", padding: "2vh" }}>User-Email</th>
+            <th className="table-data"> ID</th>
+            <th className="table-data">Name</th>
+            <th className="table-data">Type</th>
+            <th className="table-data">Subscription</th>
+            <th className="table-data">Enrollment_Date</th>
+            <th className="table-data">Expiring_In</th>
+            <th className="table-data">Renewal</th>
+            <th className="table-data">User-Email</th>
             {/* <th style={{ border: "none" }}>View Profile</th> */}
           </tr>
         </thead>
@@ -50,27 +59,27 @@ const TableComponent = ({ data }) => {
               }}
             >
               <td>
-                <div style={{ padding: "2vh" }}>{entry.customerId}</div>
+                <div className="table-data">{entry.customerId}</div>
               </td>
               <td>
-                <div style={{ padding: "2vh" }}>{entry.name}</div>
+                <div className="table-data">{entry.name}</div>
               </td>
-              <td>
-                <div style={{ padding: "2vh" }}>
+              <td className="table-data">
+                <div>
                   {entry.type.map((type, index) => (
                     <div key={index}>{type}</div>
                   ))}
                 </div>
               </td>
-              <td>
-                <div style={{ padding: "2vh" }}>
+              <td className="table-data">
+                <div>
                   {entry.subscription.map((subscription, index) => (
                     <div key={index}>{subscription}</div>
                   ))}
                 </div>
               </td>
-              <td>
-                <div style={{ padding: "2vh" }}>
+              <td className="table-data">
+                <div>
                   {entry.enrollmentDate.map((date, index) => (
                     <div style={{ marginTop: "0.5vh" }} key={index}>
                       {date}
@@ -78,8 +87,8 @@ const TableComponent = ({ data }) => {
                   ))}
                 </div>
               </td>
-              <td>
-                <div style={{ padding: "2vh" }}>
+              <td className="table-data">
+                <div>
                   {entry.expiringIn.map((date, index) => (
                     <div style={{ marginTop: "0.5vh" }} key={index}>
                       {date}
@@ -87,8 +96,8 @@ const TableComponent = ({ data }) => {
                   ))}
                 </div>
               </td>
-              <td>
-                <div style={{ padding: "2vh" }}>
+              <td className="table-data">
+                <div>
                   {entry.autoRenewal.map((type, index) => (
                     <div style={{ marginTop: "0.5vh" }} key={index}>
                       {type}
@@ -96,8 +105,8 @@ const TableComponent = ({ data }) => {
                   ))}
                 </div>
               </td>
-              <td>
-                <div style={{ padding: "2vh" }}>{entry.email}</div>
+              <td className="table-data">
+                <div>{entry.email}</div>
               </td>
               {/* <td>
                 <button

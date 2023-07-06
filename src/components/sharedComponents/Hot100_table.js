@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const TableComponent = ({ data }) => {
   const [currentPage, setCurrentPage] = useState(1);
-  const entriesPerPage = 10;
+  const entriesPerPage = 8;
   const totalPages = Math.ceil((data?.length || 0) / entriesPerPage);
   const startIndex = (currentPage - 1) * entriesPerPage;
   const endIndex = startIndex + entriesPerPage;
@@ -23,7 +23,7 @@ const TableComponent = ({ data }) => {
       <table style={{ width: "80vw", borderCollapse: "collapse" }}>
         <thead>
           <tr>
-            <th style={{ border: "none" }}>Position</th>
+            <th style={{ border: "none", padding: "1vh" }}>Position</th>
             <th style={{ border: "none" }}>Customer ID</th>
             <th style={{ border: "none" }}>Name</th>
             <th style={{ border: "none" }}>Paid Rank</th>
@@ -57,6 +57,7 @@ const TableComponent = ({ data }) => {
             border: "none",
             margin: "0.125vw",
             fontWeight: "bold",
+            padding: "0.25vh",
           }}
         >
           Previous

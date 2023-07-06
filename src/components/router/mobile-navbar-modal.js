@@ -91,7 +91,7 @@ export default function NavModal() {
                   }
                   onClick={() => navigate("/snapshot/1")}
                 >
-                  Total Active Personal Customers
+                  Active Customers
                 </div>
 
                 <div
@@ -102,7 +102,7 @@ export default function NavModal() {
                   }
                   onClick={() => navigate("/snapshot/2")}
                 >
-                  Inactive Enrollment Customers Last 30 days
+                  Inactive Customers
                 </div>
                 <div
                   className={
@@ -112,7 +112,7 @@ export default function NavModal() {
                   }
                   onClick={() => navigate("/snapshot/3")}
                 >
-                  Active Subscribers in My Enrollment Tree{" "}
+                  Active Subscribers{" "}
                 </div>
                 <div
                   className={
@@ -122,7 +122,7 @@ export default function NavModal() {
                   }
                   onClick={() => navigate("/snapshot/4")}
                 >
-                  New Promoted Team Ranks{" "}
+                  New Team Ranks{" "}
                 </div>
                 <div
                   className={
@@ -133,7 +133,7 @@ export default function NavModal() {
                   onClick={() => navigate("/snapshot/5")}
                 >
                   {" "}
-                  Raising Ranks Progress
+                  Ranks Progress
                 </div>
               </>
             )}
