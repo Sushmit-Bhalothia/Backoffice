@@ -32,20 +32,10 @@ const TableComponent = ({ data }) => {
           </tr>
         </thead>
         <tbody style={{ textAlign: "center" }}>
-          {data.slice(startIndex, endIndex).map((entry, index) => (
-            <tr
-              key={entry.customerId}
-              style={{
-                backgroundColor: index % 2 === 0 ? "#fdfaff" : "white",
-                height: "5.5vh",
-              }}
-            >
+          {data.slice(startIndex, endIndex).map((entry) => (
+            <tr key={entry.customerId}>
               <td>{entry.customerId}</td>
-              <td>
-                {" "}
-                {}
-                {entry.name}
-              </td>
+              <td>{entry.name}</td>
               <td>{entry.achievedRank}</td>
               <td>{entry.directSponsor}</td>
               <td>{entry.enrollmentLevel}</td>

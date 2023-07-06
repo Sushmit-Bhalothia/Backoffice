@@ -4,23 +4,30 @@ import { Directus } from "@directus/sdk";
 
 import TableComponent from "../../sharedComponents/TableComponenet";
 import Filter from "../../sharedComponents/Filter";
+import React, { useState, useEffect } from "react";
+
+// Other imports...
+
 function Snapshot4() {
-  let publicdata;
-  async function publicData() {
+  const [publicdata, setPublicData] = useState([]);
+
+  async function fetchPublicData() {
     try {
       const directus = new Directus("https://directus.bebackoffice.com");
-      let p = await directus.items("Team_Ranks").readByQuery({ sort: ["id"] });
-      publicdata = p.data;
-
-      // console.log(publicdata[0]);
-      publicdata.forEach((item) => {
-        console.log(item.name);
-      });
+      const response = await directus
+        .items("Team_Ranks")
+        .readByQuery({ sort: ["id"] });
+      setPublicData(response.data);
     } catch (error) {
       console.error("An error occurred while fetching public data:", error);
     }
   }
-  publicData();
+
+  useEffect(() => {
+    fetchPublicData();
+  }, []);
+
+  console.log("1", publicdata);
 
   return (
     <div>
@@ -36,12 +43,16 @@ function Snapshot4() {
 
       <Filter />
 
-      <TableComponent data={publicdata} />
+      {publicdata.length > 0 ? (
+        <TableComponent data={publicdata} />
+      ) : (
+        <div>Loading...</div>
+      )}
     </div>
   );
 }
-export default Snapshot4;
 
+export default Snapshot4;
 // const data = [
 //   {
 //     customerId: 1,
