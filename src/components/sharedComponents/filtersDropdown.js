@@ -1,11 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "../.././css/main.css";
 
+import { FilterContext } from ".././contexts/FilterContext";
+
 const FilterDropdown = () => {
+  const { filter, updateFilter } = useContext(FilterContext);
   const [selectedFilter, setSelectedFilter] = useState("");
 
   const handleChange = (event) => {
     setSelectedFilter(event.target.value);
+    updateFilter({ sort: event.target.value });
   };
 
   return (
@@ -28,8 +32,8 @@ const FilterDropdown = () => {
         onChange={handleChange}
       >
         <option value="">Alphabetic</option>
-        <option value="option1">ID</option>
-        <option value="option2">Name</option>
+        <option value="id">ID</option>
+        <option value="name">Name</option>
       </select>
     </div>
   );

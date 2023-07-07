@@ -5,14 +5,21 @@ export const FilterContext = createContext();
 
 // Create a provider component
 export const FilterProvider = ({ children }) => {
-  const [filter, setFilter] = useState(""); // Default language is 'en' (English)
+  const [filter, setFilter] = useState({
+    name: "",
+    sort: "id",
+    date: "",
+  }); // Default filter values
 
-  // Function to update the language
+  // Function to update the filter
   const updateFilter = (newFilter) => {
-    setFilter(newFilter);
+    setFilter((prevFilter) => ({
+      ...prevFilter,
+      ...newFilter,
+    }));
   };
 
-  // Provide the language state and update function to the children components
+  // Provide the filter state and update function to the children components
   return (
     <FilterContext.Provider value={{ filter, updateFilter }}>
       {children}

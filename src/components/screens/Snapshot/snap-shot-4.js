@@ -19,9 +19,9 @@ function Snapshot4() {
     try {
       const directus = new Directus("https://directus.bebackoffice.com");
       const response = await directus.items("Team_Ranks").readByQuery({
-        sort: ["id"],
+        sort: [filter.sort],
         filter: {
-          name: filter ? { _contains: filter } : undefined,
+          name: filter.name ? { _contains: filter.name } : undefined,
         },
       });
       setPublicData(response.data);

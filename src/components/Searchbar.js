@@ -1,10 +1,11 @@
 import { useContext } from "react";
 import { FilterContext } from "./contexts/FilterContext";
+
 function SearchBar() {
   const { filter, updateFilter } = useContext(FilterContext);
 
   const handleChange = (event) => {
-    updateFilter(event.target.value);
+    updateFilter({ name: event.target.value }); // Update only the name property
   };
 
   return (
@@ -21,7 +22,7 @@ function SearchBar() {
         className="searchbar"
         type="text"
         placeholder=" 🔍 Search by name or ID"
-        value={filter}
+        value={filter.name} // Access the name property from filter object
         onChange={handleChange}
       />
     </div>
