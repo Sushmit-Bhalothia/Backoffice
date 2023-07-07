@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../../css/main.css";
 
 const TableComponent = ({ data }) => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -32,8 +33,14 @@ const TableComponent = ({ data }) => {
           </tr>
         </thead>
         <tbody style={{ textAlign: "center" }}>
-          {data.slice(startIndex, endIndex).map((entry) => (
-            <tr key={entry.customerId}>
+          {data.slice(startIndex, endIndex).map((entry, index) => (
+            <tr
+              key={entry.customerId}
+              style={{
+                backgroundColor: index % 2 === 0 ? "#fdfaff" : "white",
+                height: "5.5vh",
+              }}
+            >
               <td>{entry.customerId}</td>
               <td>{entry.name}</td>
               <td>{entry.achievedRank}</td>

@@ -14,9 +14,12 @@ function Snapshot4() {
   async function fetchPublicData() {
     try {
       const directus = new Directus("https://directus.bebackoffice.com");
-      const response = await directus
-        .items("Team_Ranks")
-        .readByQuery({ sort: ["id"] });
+      const response = await directus.items("Team_Ranks").readByQuery({
+        sort: ["id"],
+        filter: {
+          // name: { _contains: "a" },
+        },
+      });
       setPublicData(response.data);
     } catch (error) {
       console.error("An error occurred while fetching public data:", error);
