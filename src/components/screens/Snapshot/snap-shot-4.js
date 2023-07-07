@@ -4,12 +4,16 @@ import { Directus } from "@directus/sdk";
 
 import TableComponent from "../../sharedComponents/TableComponenet";
 import Filter from "../../sharedComponents/Filter";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import React from "react";
+import { FilterContext } from "../../contexts/FilterContext";
 
 // Other imports...
 
 function Snapshot4() {
   const [publicdata, setPublicData] = useState([]);
+  const { filter, updateFilter } = useContext(FilterContext);
+  console.log(filter);
 
   async function fetchPublicData() {
     try {
@@ -17,7 +21,7 @@ function Snapshot4() {
       const response = await directus.items("Team_Ranks").readByQuery({
         sort: ["id"],
         filter: {
-          // name: { _contains: "a" },
+          name: filter ? { _contains: filter } : undefined,
         },
       });
       setPublicData(response.data);
@@ -28,9 +32,10 @@ function Snapshot4() {
 
   useEffect(() => {
     fetchPublicData();
-  }, []);
+  }, [filter]);
 
   console.log("1", publicdata);
+  // console.log(state.num);
 
   return (
     <div>
@@ -49,7 +54,7 @@ function Snapshot4() {
       {publicdata.length > 0 ? (
         <TableComponent data={publicdata} />
       ) : (
-        <div>Loading...</div>
+        <div>No data Found ...</div>
       )}
     </div>
   );

@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, GlobalStateContext, DispatchStateContext } from "react";
+import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Signin from "../auth/Signin";
 import ForgotPassword from "../auth/forgotpassword";
@@ -29,7 +30,7 @@ import ScreeNotFound from "../router/404";
 import Embed from "../screens/embed";
 import SnapshotSideNav from "../router/optionalsidebar";
 import Hot100_Sidebar from "../router/hot100_sidebar";
-
+import { FilterProvider } from "../contexts/FilterContext";
 function App() {
   const [isSignedIn, setIsSignedIn] = useState(true);
 
@@ -42,170 +43,174 @@ function App() {
   };
 
   return (
-    <div>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/sign-in" element={<Signin />} />
-          <Route path="/forgot-password" element={<ForgotPassword />} />
-          <Route path="/email-sent" element={<EmailSent />} />
-          <Route path="/setup-profile" element={<SetUpProfile />} />
-          <Route path="/social-media" element={<SocialMedia />} />
-          <Route path="/success" element={<Success />} />
-          <Route path="/welcome" element={<Welcome />} />
-          <Route
-            path="/*"
-            element={
-              <>
-                <Header />
-                <Routes>
-                  <Route
-                    path="/"
-                    element={
-                      <Protected isSignedIn={isSignedIn}>
-                        <Main />
-                      </Protected>
-                    }
-                  />
-                  <Route
-                    path="/snapshot/*"
-                    element={
-                      <>
+    //
+    <FilterProvider>
+      <div>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/sign-in" element={<Signin />} />
+            <Route path="/forgot-password" element={<ForgotPassword />} />
+            <Route path="/email-sent" element={<EmailSent />} />
+            <Route path="/setup-profile" element={<SetUpProfile />} />
+            <Route path="/social-media" element={<SocialMedia />} />
+            <Route path="/success" element={<Success />} />
+            <Route path="/welcome" element={<Welcome />} />
+            <Route
+              path="/*"
+              element={
+                <>
+                  <Header />
+                  <Routes>
+                    <Route
+                      path="/"
+                      element={
                         <Protected isSignedIn={isSignedIn}>
-                          <div className="outer">
-                            <SnapshotSideNav />
-                            <Routes>
-                              <Route
-                                path="/1"
-                                element={
-                                  <Protected isSignedIn={isSignedIn}>
-                                    <Snapshot1 />
-                                  </Protected>
-                                }
-                              />
-                              <Route
-                                path="/2"
-                                element={
-                                  <Protected isSignedIn={isSignedIn}>
-                                    <Snapshot2 />
-                                  </Protected>
-                                }
-                              />
-                              <Route
-                                path="/3"
-                                element={
-                                  <Protected isSignedIn={isSignedIn}>
-                                    <Snapshot3 />
-                                  </Protected>
-                                }
-                              />
-                              <Route
-                                path="/4"
-                                element={
-                                  <Protected isSignedIn={isSignedIn}>
-                                    <Snapshot4 />
-                                  </Protected>
-                                }
-                              />
-                              <Route
-                                path="/5"
-                                element={
-                                  <Protected isSignedIn={isSignedIn}>
-                                    <Snapshot5 />
-                                  </Protected>
-                                }
-                              />
-                            </Routes>
-                          </div>
+                          <Main />
                         </Protected>
-                      </>
-                    }
-                  />
-                  <Route
-                    path="/hot-100/*"
-                    element={
-                      <>
+                      }
+                    />
+                    <Route
+                      path="/snapshot/*"
+                      element={
+                        <>
+                          <Protected isSignedIn={isSignedIn}>
+                            <div className="outer">
+                              <SnapshotSideNav />
+                              <Routes>
+                                <Route
+                                  path="/1"
+                                  element={
+                                    <Protected isSignedIn={isSignedIn}>
+                                      <Snapshot1 />
+                                    </Protected>
+                                  }
+                                />
+                                <Route
+                                  path="/2"
+                                  element={
+                                    <Protected isSignedIn={isSignedIn}>
+                                      <Snapshot2 />
+                                    </Protected>
+                                  }
+                                />
+                                <Route
+                                  path="/3"
+                                  element={
+                                    <Protected isSignedIn={isSignedIn}>
+                                      <Snapshot3 />
+                                    </Protected>
+                                  }
+                                />
+                                <Route
+                                  path="/4"
+                                  element={
+                                    <Protected isSignedIn={isSignedIn}>
+                                      <Snapshot4 />
+                                    </Protected>
+                                  }
+                                />
+                                <Route
+                                  path="/5"
+                                  element={
+                                    <Protected isSignedIn={isSignedIn}>
+                                      <Snapshot5 />
+                                    </Protected>
+                                  }
+                                />
+                              </Routes>
+                            </div>
+                          </Protected>
+                        </>
+                      }
+                    />
+                    <Route
+                      path="/hot-100/*"
+                      element={
+                        <>
+                          <Protected isSignedIn={isSignedIn}>
+                            <div className="outer">
+                              <Hot100_Sidebar />
+                              <Routes>
+                                <Route
+                                  path="/1"
+                                  element={
+                                    <Protected isSignedIn={isSignedIn}>
+                                      <Hot100_1 />
+                                    </Protected>
+                                  }
+                                />
+                                <Route
+                                  path="/2"
+                                  element={
+                                    <Protected isSignedIn={isSignedIn}>
+                                      <Hot100_2 />
+                                    </Protected>
+                                  }
+                                />
+                                <Route
+                                  path="/3"
+                                  element={
+                                    <Protected isSignedIn={isSignedIn}>
+                                      <Hot100_3 />
+                                    </Protected>
+                                  }
+                                />
+                                <Route
+                                  path="/4"
+                                  element={
+                                    <Protected isSignedIn={isSignedIn}>
+                                      <Hot100_4 />
+                                    </Protected>
+                                  }
+                                />
+                              </Routes>
+                            </div>
+                          </Protected>
+                        </>
+                      }
+                    />
+                    <Route
+                      path="/analytics"
+                      element={
                         <Protected isSignedIn={isSignedIn}>
-                          <div className="outer">
-                            <Hot100_Sidebar />
-                            <Routes>
-                              <Route
-                                path="/1"
-                                element={
-                                  <Protected isSignedIn={isSignedIn}>
-                                    <Hot100_1 />
-                                  </Protected>
-                                }
-                              />
-                              <Route
-                                path="/2"
-                                element={
-                                  <Protected isSignedIn={isSignedIn}>
-                                    <Hot100_2 />
-                                  </Protected>
-                                }
-                              />
-                              <Route
-                                path="/3"
-                                element={
-                                  <Protected isSignedIn={isSignedIn}>
-                                    <Hot100_3 />
-                                  </Protected>
-                                }
-                              />
-                              <Route
-                                path="/4"
-                                element={
-                                  <Protected isSignedIn={isSignedIn}>
-                                    <Hot100_4 />
-                                  </Protected>
-                                }
-                              />
-                            </Routes>
-                          </div>
+                          <Analtics />
                         </Protected>
-                      </>
-                    }
-                  />
-                  <Route
-                    path="/analytics"
-                    element={
-                      <Protected isSignedIn={isSignedIn}>
-                        <Analtics />
-                      </Protected>
-                    }
-                  />
-                  <Route
-                    path="/hall-of-fame"
-                    element={
-                      <Protected isSignedIn={isSignedIn}>
-                        <HallFame />
-                      </Protected>
-                    }
-                  />
-                  <Route
-                    path="/social"
-                    element={
-                      <Protected isSignedIn={isSignedIn}>
-                        <Social />
-                      </Protected>
-                    }
-                  />
-                  <Route
-                    path="/*"
-                    element={
-                      <Protected isSignedIn={isSignedIn}>
-                        <ScreeNotFound />
-                      </Protected>
-                    }
-                  />
-                </Routes>
-                <Footer />
-              </>
-            }
-          />
-        </Routes>
-      </BrowserRouter>
-    </div>
+                      }
+                    />
+                    <Route
+                      path="/hall-of-fame"
+                      element={
+                        <Protected isSignedIn={isSignedIn}>
+                          <HallFame />
+                        </Protected>
+                      }
+                    />
+                    <Route
+                      path="/social"
+                      element={
+                        <Protected isSignedIn={isSignedIn}>
+                          <Social />
+                        </Protected>
+                      }
+                    />
+                    <Route
+                      path="/*"
+                      element={
+                        <Protected isSignedIn={isSignedIn}>
+                          <ScreeNotFound />
+                        </Protected>
+                      }
+                    />
+                  </Routes>
+                  <Footer />
+                </>
+              }
+            />
+          </Routes>
+        </BrowserRouter>
+      </div>
+    </FilterProvider>
+    //
   );
 }
 

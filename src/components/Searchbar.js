@@ -1,11 +1,10 @@
-import React, { useState } from "react";
-import "../css/auth-onboarding/index.css";
-
+import { useContext } from "react";
+import { FilterContext } from "./contexts/FilterContext";
 function SearchBar() {
-  const [searchTerm, setSearchTerm] = useState("");
+  const { filter, updateFilter } = useContext(FilterContext);
 
   const handleChange = (event) => {
-    setSearchTerm(event.target.value);
+    updateFilter(event.target.value);
   };
 
   return (
@@ -19,11 +18,10 @@ function SearchBar() {
       }}
     >
       <input
-        // className="Input"
         className="searchbar"
         type="text"
         placeholder=" 🔍 Search by name or ID"
-        value={searchTerm}
+        value={filter}
         onChange={handleChange}
       />
     </div>
