@@ -3,11 +3,80 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilter, faTimes } from "@fortawesome/free-solid-svg-icons";
 import "../../css/main.css";
 
-const Architecture = ({ name }) => {
+const ArchitectureOption1 = ({ name, onClose }) => {
   const [isOpen, setIsOpen] = useState(true);
 
   const closeArchitecture = () => {
     setIsOpen(false);
+    onClose(name);
+  };
+
+  return (
+    <div className={`architecture ${isOpen ? "open" : "closed"}`}>
+      <span className="architecture-name">
+        {name} here one drohhhhjklkjhghjklp down will come{" "}
+      </span>
+      <span
+        className="close"
+        onClick={closeArchitecture}
+        style={{ cursor: "pointer" }}
+      >
+        <FontAwesomeIcon icon={faTimes} />
+      </span>
+    </div>
+  );
+};
+
+const ArchitectureOption2 = ({ name, onClose }) => {
+  const [isOpen, setIsOpen] = useState(true);
+
+  const closeArchitecture = () => {
+    setIsOpen(false);
+    onClose(name);
+  };
+
+  return (
+    <div className={`architecture ${isOpen ? "open" : "closed"}`}>
+      <span className="architecture-name">{name}</span>
+      <span
+        className="close"
+        onClick={closeArchitecture}
+        style={{ cursor: "pointer" }}
+      >
+        <FontAwesomeIcon icon={faTimes} />
+      </span>
+    </div>
+  );
+};
+
+const ArchitectureOption3 = ({ name, onClose }) => {
+  const [isOpen, setIsOpen] = useState(true);
+
+  const closeArchitecture = () => {
+    setIsOpen(false);
+    onClose(name);
+  };
+
+  return (
+    <div className={`architecture ${isOpen ? "open" : "closed"}`}>
+      <span className="architecture-name">{name}</span>
+      <span
+        className="close"
+        onClick={closeArchitecture}
+        style={{ cursor: "pointer" }}
+      >
+        <FontAwesomeIcon icon={faTimes} />
+      </span>
+    </div>
+  );
+};
+
+const ArchitectureOption4 = ({ name, onClose }) => {
+  const [isOpen, setIsOpen] = useState(true);
+
+  const closeArchitecture = () => {
+    setIsOpen(false);
+    onClose(name);
   };
 
   return (
@@ -37,7 +106,9 @@ const FilterModal = () => {
   };
 
   const selectOption = (option) => {
-    setSelectedOptions([...selectedOptions, option]);
+    if (!selectedOptions.includes(option)) {
+      setSelectedOptions([...selectedOptions, option]);
+    }
   };
 
   const removeOption = (option) => {
@@ -45,6 +116,57 @@ const FilterModal = () => {
       (selected) => selected !== option
     );
     setSelectedOptions(updatedOptions);
+  };
+
+  const renderArchitectures = () => {
+    return selectedOptions.map((option) => {
+      switch (option) {
+        case "Option 1":
+          return (
+            <ArchitectureOption1
+              key={option}
+              name={option}
+              onClose={() => removeOption(option)}
+            />
+          );
+        case "Option 2":
+          return (
+            <ArchitectureOption2
+              key={option}
+              name={option}
+              onClose={() => removeOption(option)}
+            />
+          );
+        case "Option 3":
+          return (
+            <ArchitectureOption3
+              key={option}
+              name={option}
+              onClose={() => removeOption(option)}
+            />
+          );
+        case "Option 4":
+          return (
+            <ArchitectureOption4
+              key={option}
+              name={option}
+              onClose={() => removeOption(option)}
+            />
+          );
+        default:
+          return null;
+      }
+    });
+  };
+
+  const resetFilters = () => {
+    setSelectedOptions([]);
+  };
+
+  const applyFilters = () => {
+    // Apply the selected filters
+    // You can add your logic here
+    closeModal();
   };
 
   return (
@@ -55,6 +177,7 @@ const FilterModal = () => {
           height: "3.5vh",
           marginTop: "1.5vh",
           cursor: "pointer",
+          color: isOpen ? "blue" : "inherit",
         }}
         className="Trans-Button"
         onClick={openModal}
@@ -79,23 +202,24 @@ const FilterModal = () => {
             </span>
             <h2>Add a Filter</h2>
 
-            <div id="selectedArchitecture">
-              {selectedOptions.map((option) => (
-                <Architecture
-                  key={option}
-                  name={option}
-                  onClose={() => removeOption(option)}
-                />
-              ))}
+            <div id="selectedArchitecture">{renderArchitectures()}</div>
+            <div>
+              <select
+                className="dropbtn"
+                onChange={(event) => selectOption(event.target.value)}
+                // multiple
+              >
+                <option value="Option 1">Option 1</option>
+                <option value="Option 2">Option 2</option>
+                <option value="Option 3">Option 3</option>
+                <option value="Option 4">Option 4</option>
+              </select>
             </div>
-            <div className="dropdown">
-              <button className="dropbtn">Select an Option</button>
-              <div className="dropdown-content">
-                <a onClick={() => selectOption("Option 1")}>Option 1</a>
-                <a onClick={() => selectOption("Option 2")}>Option 2</a>
-                <a onClick={() => selectOption("Option 3")}>Option 3</a>
-                <a onClick={() => selectOption("Option 4")}>Option 4</a>
-              </div>
+            <div>
+              <button className="Smaller-Button" onClick={applyFilters}>
+                Apply
+              </button>
+              <button onClick={resetFilters}>Reset All</button>
             </div>
           </div>
         </div>

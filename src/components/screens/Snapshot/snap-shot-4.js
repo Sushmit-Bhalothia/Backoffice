@@ -14,6 +14,10 @@ function Snapshot4() {
   const [publicdata, setPublicData] = useState([]);
   const { filter, updateFilter } = useContext(FilterContext);
   console.log(filter);
+  let filterId = parseInt(filter.name, 10);
+
+  filterId = isNaN(filterId) ? -1 : filterId;
+  console.log("filter id is " + typeof filterId + filterId);
 
   async function fetchPublicData() {
     try {
@@ -21,7 +25,10 @@ function Snapshot4() {
       const response = await directus.items("Team_Ranks").readByQuery({
         sort: [filter.sort],
         filter: {
-          name: filter.name ? { _contains: filter.name } : undefined,
+          _or: [
+            { name: filter.name ? { _contains: filter.name } : undefined },
+            { id: filterId ? { _eq: filterId } : undefined },
+          ],
         },
       });
       setPublicData(response.data);
