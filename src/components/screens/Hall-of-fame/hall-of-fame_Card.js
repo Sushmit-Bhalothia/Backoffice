@@ -1,5 +1,5 @@
-import "../../css/main.css";
-import ae from "../../lib/profile.jpeg";
+import "../../../css/main.css";
+import ae from "../../../lib/profile.jpeg";
 import Review from "./review";
 function Card() {
   const rating = Math.floor(Math.random() * 4) + 2;

@@ -1,5 +1,5 @@
 import "../../css/auth-onboarding/index.css";
-import Logo from "../router/logo";
+import Logo from "../Navbar/logo";
 import { Suspense } from "react";
 import RightsAgree from "./RightsAgreement";
 import PolicySection from "./PolicySection";

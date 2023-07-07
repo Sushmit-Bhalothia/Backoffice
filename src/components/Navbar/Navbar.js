@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 import ae from "../../lib/Be_logo.png";
 import Dropdown from "../sharedComponents/dropdown";
 import { useNavigate } from "react-router-dom";
-import ProfileModal from "./profilemodal";
+import ProfileModal from "../sharedComponents/profilemodal";
 import MobileNavbar from "./mobile-navbar-modal";
-import SearchBar from "../Searchbar";
+import SearchBar from "../filters/Searchbar";
 function Navbar() {
   const navigate = useNavigate();
 

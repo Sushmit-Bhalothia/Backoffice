@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useCallback } from "react";
-import "../../css/main.css";
-import SearchBar from "../Searchbar";
+import "../../../css/main.css";
+import SearchBar from "../../filters/Searchbar";
 import Card from "./hall-of-fame_Card";
 
 function HallFame() {

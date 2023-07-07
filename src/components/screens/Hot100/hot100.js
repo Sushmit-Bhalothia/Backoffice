@@ -1,7 +1,7 @@
-import "../../css/main.css";
+import "../../../css/main.css";
 import React, { useState } from "react";
 
-import Embed from "../screens/embed";
+import Embed from "../embed";
 
 const fetchGuestToken = async () => {
   // For now, manually giving the token

@@ -1,8 +1,8 @@
 import "../../../css/main.css";
-import SearchBar from "../../Searchbar";
+import SearchBar from "../../filters/Searchbar";
 
-import TableComponent from "../../sharedComponents/hybridTable";
-import Filter from "../../sharedComponents/Filter";
+import TableComponent from "../../Table/hybridTable";
+import Filter from "../../filters/Filter";
 function Snapshot1() {
   const data = [
     {

@@ -1,7 +1,7 @@
 import "../../css/main.css";
-import React, { useState } from "react";
+
 import { useNavigate } from "react-router-dom";
-import ProfileModal from "../screens/optionalprofilemodal";
+import ProfileModal from "../sharedComponents/optionalprofilemodal";
 
 function OptionalSide() {
   const navigate = useNavigate();
@@ -27,64 +27,51 @@ function OptionalSide() {
       >
         <div
           className={
-            window.location.pathname.startsWith("/snapshot/1")
+            window.location.pathname.startsWith("/hot-100/1")
               ? "active each"
               : "each"
           }
           onClick={() => {
-            navigate("/snapshot/1");
+            navigate("/hot-100/1");
           }}
         >
-          Active Customers
+          Top Enrollers
         </div>
         <div
           className={
-            window.location.pathname.startsWith("/snapshot/2")
+            window.location.pathname.startsWith("/hot-100/2")
               ? "active each"
               : "each"
           }
           onClick={() => {
-            navigate("/snapshot/2");
+            navigate("/hot-100/2");
           }}
         >
-          Inactive Customers
+          Top Producers
         </div>
         <div
           className={
-            window.location.pathname.startsWith("/snapshot/3")
+            window.location.pathname.startsWith("/hot-100/3")
               ? "active each"
               : "each"
           }
           onClick={() => {
-            navigate("/snapshot/3");
+            navigate("/hot-100/3");
           }}
         >
-          Active Subscribers
+          My Top Enrollers
         </div>
         <div
           className={
-            window.location.pathname.startsWith("/snapshot/4")
+            window.location.pathname.startsWith("/hot-100/4")
               ? "active each"
               : "each"
           }
           onClick={() => {
-            navigate("/snapshot/4");
+            navigate("/hot-100/4");
           }}
         >
-          Team Ranks
-        </div>
-        <div
-          className={
-            window.location.pathname.startsWith("/snapshot/5")
-              ? "active each"
-              : "each"
-          }
-          onClick={() => {
-            navigate("/snapshot/5");
-          }}
-        >
-          {" "}
-          Rank Progress
+          My Top Producers
         </div>
       </div>
     </div>

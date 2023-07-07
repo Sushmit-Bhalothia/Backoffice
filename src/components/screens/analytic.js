@@ -1,6 +1,6 @@
 import "../../css/main.css";
 import React, { useState } from "react";
-import OptionalSide from "../router/optionalsidebar";
+import OptionalSide from "../Navbar/optionalsidebar";
 
 function Analytic() {
   const [activePage, setActivePage] = useState("2");

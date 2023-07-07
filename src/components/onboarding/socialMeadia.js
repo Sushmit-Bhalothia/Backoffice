@@ -1,9 +1,9 @@
 import "../../css/auth-onboarding/index.css";
-import Logo from "../router/logo";
+import Logo from "../Navbar/logo";
 import { useNavigate } from "react-router-dom";
 import Dropdown from "../sharedComponents/dropdown";
 import ImageSelector from "./imageSelector";
-import Comp from "../onboarding/comp";
+import Comp from "../onboarding/SingleSocialMedia";
 import RightsAgree from "../auth/RightsAgreement";
 import PolicySection from "../auth/PolicySection";
 

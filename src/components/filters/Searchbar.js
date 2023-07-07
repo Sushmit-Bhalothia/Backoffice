@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { FilterContext } from "./contexts/FilterContext";
+import { FilterContext } from "../contexts/FilterContext";
 
 function SearchBar() {
   const { filter, updateFilter } = useContext(FilterContext);

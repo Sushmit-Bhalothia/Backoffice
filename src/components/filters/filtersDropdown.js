@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import "../.././css/main.css";
 
-import { FilterContext } from ".././contexts/FilterContext";
+import { FilterContext } from "../contexts/FilterContext";
 
 const FilterDropdown = () => {
   const { filter, updateFilter } = useContext(FilterContext);

@@ -3,7 +3,7 @@ import { Suspense } from "react";
 import SignInForm from "./signinform";
 import Dropdown from "../sharedComponents/dropdown";
 import RightsAgree from "./RightsAgreement";
-import Logo from "../router/logo";
+import Logo from "../Navbar/logo";
 import PolicySection from "./PolicySection";
 
 function Signin() {

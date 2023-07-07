@@ -1,9 +1,9 @@
 import "../../../css/main.css";
-import SearchBar from "../../Searchbar";
+import SearchBar from "../../filters/Searchbar";
 import { Directus } from "@directus/sdk";
 
-import TableComponent from "../../sharedComponents/TableComponenet";
-import Filter from "../../sharedComponents/Filter";
+import TableComponent from "../../Table/TableComponenet";
+import Filter from "../../filters/Filter";
 import { useState, useEffect, useContext } from "react";
 import React from "react";
 import { FilterContext } from "../../contexts/FilterContext";

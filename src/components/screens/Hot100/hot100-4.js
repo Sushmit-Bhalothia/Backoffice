@@ -1,8 +1,8 @@
 import "../../../css/main.css";
-import Table from "../../sharedComponents/Hot100_table";
-import Filter from "../../sharedComponents/Filter2";
-import SearchBar from "../../Searchbar";
-import Addfilter from "../../sharedComponents/additionalFilter";
+import Table from "../../Table/Hot100_table";
+import Filter from "../../filters/Filter2";
+import SearchBar from "../../filters/Searchbar";
+import Addfilter from "../../filters/additionalFilter";
 function Hot100_1() {
   const data = [
     {

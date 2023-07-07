@@ -1,7 +1,7 @@
 import "../../../css/main.css";
-import Table from "../../sharedComponents/Hot100_table";
-import Filter from "../../sharedComponents/Filter2";
-import SearchBar from "../../Searchbar";
+import Table from "../../Table/Hot100_table";
+import Filter from "../../filters/Filter2";
+import SearchBar from "../../filters/Searchbar";
 import Card from "./hot100_card";
 import TopCard from "./Hot100_TopCard";
 function Hot100_1() {

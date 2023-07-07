@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import "../../css/headerFooter.css";
 import ae from "../../lib/mobile-nav-icon.png";
 import { useNavigate } from "react-router-dom";
-import ProfileModal from "./profilemodal";
+import ProfileModal from "../sharedComponents/profilemodal";
 import Dropdown from "../sharedComponents/dropdown";
 import aae from "../../lib/Be_logo.png";
-import Logout from "../Logout";
+import Logout from "../sharedComponents/Logout";
 
 export default function NavModal() {
   const navigate = useNavigate();
