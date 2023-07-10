@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const TableComponent = ({ data }) => {
   const [currentPage, setCurrentPage] = useState(1);
-  const entriesPerPage = 8;
+  const entriesPerPage = 10;
   const totalPages = Math.ceil((data?.length || 0) / entriesPerPage);
   const startIndex = (currentPage - 1) * entriesPerPage;
   const endIndex = startIndex + entriesPerPage;
@@ -19,15 +19,15 @@ const TableComponent = ({ data }) => {
   }
 
   return (
-    <div>
-      <table style={{ width: "80vw", borderCollapse: "collapse" }}>
+    <div className="table-container">
+      <table className="table">
         <thead>
           <tr>
-            <th style={{ border: "none", padding: "1vh" }}>Position</th>
-            <th style={{ border: "none" }}>Customer ID</th>
-            <th style={{ border: "none" }}>Name</th>
-            <th style={{ border: "none" }}>Paid Rank</th>
-            <th style={{ border: "none" }}>Country</th>
+            <th className="table-data">Position</th>
+            <th className="table-data">Customer ID</th>
+            <th className="table-data">Name</th>
+            <th className="table-data">Paid Rank</th>
+            <th className="table-data">Country</th>
           </tr>
         </thead>
         <tbody style={{ textAlign: "center" }}>
@@ -39,11 +39,12 @@ const TableComponent = ({ data }) => {
                 height: "6vh",
               }}
             >
-              <td>{entry.customerId}</td>
-              <td>{entry.name}</td>
-              <td>{entry.achievedRank}</td>
-              <td>{entry.directSponsor}</td>
-              <td>{entry.enrollmentLevel}</td>
+              <td className="table-data">{entry.customerId}</td>
+              <td className="table-data">{entry.name}</td>
+              <td className="table-data">{entry.achievedRank}</td>
+              <td className="table-data">{entry.directSponsor}</td>
+              <td className="table-data">{entry.name}</td>
+              {/* <td className="table-data">{entry.enrollmentLevel}</td> */}
             </tr>
           ))}
         </tbody>

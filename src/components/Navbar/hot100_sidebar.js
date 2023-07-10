@@ -2,6 +2,7 @@ import "../../css/main.css";
 
 import { useNavigate } from "react-router-dom";
 import ProfileModal from "../sharedComponents/optionalprofilemodal";
+import ReportBug from "../sharedComponents/ReportBug";
 
 function OptionalSide() {
   const navigate = useNavigate();
@@ -74,6 +75,7 @@ function OptionalSide() {
           My Top Producers
         </div>
       </div>
+      <ReportBug />
     </div>
   );
 }

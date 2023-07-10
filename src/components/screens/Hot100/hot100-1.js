@@ -244,7 +244,7 @@ function Hot100_1() {
 
     for (let i = 0; i < totalCards; i += cardsPerRow) {
       const row = cardRankings.slice(i, i + cardsPerRow).map((ranking) => {
-        if (i === 0 && ranking <= 3) {
+        if (ranking <= 3) {
           return <TopCard key={ranking} ranking={ranking} />;
         } else {
           return <Card key={ranking} ranking={ranking} />;
@@ -273,7 +273,10 @@ function Hot100_1() {
       {filter.displayMode === "table" ? (
         <Table data={data} />
       ) : (
-        <div className="card-container" style={{ marginTop: "8vh" }}>
+        <div
+          className="table-container"
+          style={{ paddingTop: "8vh", height: "68vh" }}
+        >
           {renderCards()}
         </div>
       )}

@@ -3,7 +3,7 @@ import "../../css/main.css";
 
 const TableComponent = ({ data }) => {
   const [currentPage, setCurrentPage] = useState(1);
-  const entriesPerPage = 9;
+  const entriesPerPage = 12;
   const totalPages = Math.ceil((data?.length || 0) / entriesPerPage);
   const startIndex = (currentPage - 1) * entriesPerPage;
   const endIndex = startIndex + entriesPerPage;
@@ -20,8 +20,14 @@ const TableComponent = ({ data }) => {
   }
 
   return (
-    <div>
-      <table style={{ width: "100%", borderCollapse: "collapse" }}>
+    <div className="table-container">
+      <table
+        style={{
+          width: "100%",
+          borderCollapse: "collapse",
+          overflowX: "scroll",
+        }}
+      >
         <thead>
           <tr>
             <th style={{ border: "none", padding: "2vh" }}>Customer ID</th>

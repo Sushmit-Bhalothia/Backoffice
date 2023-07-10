@@ -4,6 +4,7 @@ import { faFilter, faTable, faBars } from "@fortawesome/free-solid-svg-icons";
 import FilterDropdown from "./filtersDropdown";
 import CycleDropDown from "./cycle-dropdown";
 import { FilterContext } from "../contexts/FilterContext";
+import FilterModal from "./FilterModal";
 
 function Filter() {
   const { filter, updateFilter } = useContext(FilterContext);
@@ -28,54 +29,35 @@ function Filter() {
         </div>
       </div>
       <div className="right-Filter">
-        <div
-          style={{
-            paddingTop: "1vh",
-            height: "3.5vh",
-            marginTop: "1.5vh",
-            color: isFilterActive ? "#5d01a2" : "black",
-            cursor: "pointer",
-          }}
-          className="Trans-Button"
-          onClick={handleFilterToggle}
-        >
-          <FontAwesomeIcon
-            icon={faFilter}
-            style={{
-              marginRight: "0.5rem",
-              color: isFilterActive ? "#5d01a2" : "black",
-            }}
-          />
-          Filter
-        </div>
+        <FilterModal />
         <div style={{ marginTop: "2.25vh" }} className="root-filters">
           Sort by:
         </div>
         <FilterDropdown />
-      </div>
-      <div
-        style={{ marginTop: "4.5vh", cursor: "pointer" }}
-        className="root-filters"
-        onClick={() => handleDisplayModeChange("cards")}
-      >
-        <FontAwesomeIcon
-          icon={faTable}
-          style={{
-            color: filter.displayMode === "cards" ? "#5d01a2" : "black",
-          }}
-        />
-      </div>
-      <div
-        style={{ marginTop: "4.5vh", cursor: "pointer" }}
-        className="root-filters"
-        onClick={() => handleDisplayModeChange("table")}
-      >
-        <FontAwesomeIcon
-          icon={faBars}
-          style={{
-            color: filter.displayMode === "table" ? "#5d01a2" : "black",
-          }}
-        />
+        <div
+          style={{ marginTop: "2.0vh", cursor: "pointer" }}
+          className="root-filters"
+          onClick={() => handleDisplayModeChange("cards")}
+        >
+          <FontAwesomeIcon
+            icon={faTable}
+            style={{
+              color: filter.displayMode === "cards" ? "#5d01a2" : "black",
+            }}
+          />
+        </div>
+        <div
+          style={{ marginTop: "2vh", cursor: "pointer" }}
+          className="root-filters"
+          onClick={() => handleDisplayModeChange("table")}
+        >
+          <FontAwesomeIcon
+            icon={faBars}
+            style={{
+              color: filter.displayMode === "table" ? "#5d01a2" : "black",
+            }}
+          />
+        </div>
       </div>
     </div>
   );

@@ -10,7 +10,7 @@ function Social() {
           marginTop: "20vh",
         }}
       >
-        Social
+        External Link
       </h1>
     </div>
   );

@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 const TableComponent = ({ data }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [entriesPerPage, setEntriesPerPage] = useState(
-    window.innerWidth < 600 ? 12 : 6
+    window.innerWidth < 600 ? 12 : 7
   );
 
   useEffect(() => {
@@ -34,7 +34,7 @@ const TableComponent = ({ data }) => {
   }
 
   return (
-    <div>
+    <div className="table-container">
       <table className="table">
         <thead>
           <tr style={{ textAlign: "left" }}>

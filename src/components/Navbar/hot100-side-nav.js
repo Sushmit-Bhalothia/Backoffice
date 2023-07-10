@@ -1,4 +1,5 @@
 import "../../css/main.css";
+import ReportBug from "../sharedComponents/ReportBug";
 
 import { useNavigate } from "react-router-dom";
 
@@ -57,6 +58,7 @@ function Hot100_Sidebar() {
         {" "}
         My Top Producers
       </div>
+      <ReportBug />
     </div>
   );
 }

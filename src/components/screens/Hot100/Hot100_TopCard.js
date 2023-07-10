@@ -29,7 +29,7 @@ function Card({ ranking }) {
           }}
         >
           <img
-            id="hot100-Top-card-img"
+            id="hot100-Top-card-img1"
             src={imageSource}
             style={{
               width: "3vw",
@@ -39,7 +39,6 @@ function Card({ ranking }) {
               fontSize: "2vh", // Increase the font size here
               position: "absolute",
               //   top: "vh",
-              left: "8vw",
             }}
           />
 

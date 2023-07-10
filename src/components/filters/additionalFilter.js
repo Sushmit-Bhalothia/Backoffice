@@ -14,7 +14,7 @@ function Addfilter() {
 
   return (
     <>
-      <div style={{ display: "flex", cursor: "pointer" }}>
+      <div className="additionalFilter-container">
         {/* <div> */}
         <div
           className="additionalFilter"
@@ -96,7 +96,7 @@ function Addfilter() {
           className="additionalFilter"
           onClick={() => handleFilterClick("6")}
         >
-          Presidental Diamond
+          Presidental_Diamond
           <div
             className={active === "6" ? "activeAdditionalFilter" : ""}
             style={{
@@ -111,7 +111,7 @@ function Addfilter() {
           className="additionalFilter"
           onClick={() => handleFilterClick("7")}
         >
-          Royal Diamond
+          Royal_Diamond
           <div
             className={active === "7" ? "activeAdditionalFilter" : ""}
             style={{
