@@ -9,6 +9,10 @@ export const FilterProvider = ({ children }) => {
     name: "",
     sort: "id",
     date: "",
+    type: "",
+    NextRank: "",
+    Progress: "",
+    LifeTimeRank: "",
   }); // Default filter values
 
   // Function to update the filter

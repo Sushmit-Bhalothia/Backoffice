@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilter, faTimes } from "@fortawesome/free-solid-svg-icons";
 import "../../css/main.css";
 
+import { FilterContext } from "../contexts/FilterContext";
+
 const ArchitectureOption1 = ({ name, onClose }) => {
+  const { filter, updateFilter } = useContext(FilterContext);
   const [isOpen, setIsOpen] = useState(true);
 
   const closeArchitecture = () => {
@@ -11,84 +14,338 @@ const ArchitectureOption1 = ({ name, onClose }) => {
     onClose(name);
   };
 
+  const handleFilterUpdate = (value) => {
+    updateFilter({ LifeTimeRank: value });
+  };
+
+  const isOptionSelected = (value) => {
+    return filter.LifeTimeRank === value;
+  };
   return (
     <div className={`architecture ${isOpen ? "open" : "closed"}`}>
-      <span className="architecture-name">
-        {name} here one drohhhhjklkjhghjklp down will come{" "}
-      </span>
-      <span
-        className="close"
-        onClick={closeArchitecture}
-        style={{ cursor: "pointer" }}
+      <div
+        style={{ display: "flex", overflowX: "scroll", marginLeft: "1rem" }}
+        className="architecture-name"
       >
-        <FontAwesomeIcon icon={faTimes} />
-      </span>
+        {/* {name} here one drohhhhjklkjhghjklp down will come{" "} */}
+        <h4 style={{ marginRight: "1vw", marginTop: ".35vh" }}>
+          Lifetime_Rank:{" "}
+        </h4>
+        <div
+          style={{
+            padding: "2px",
+            paddingRight: "15px",
+            margin: "2px",
+            backgroundColor: isOptionSelected("Qualified_IBP")
+              ? "#6d06c6"
+              : "white",
+            color: isOptionSelected("Qualified_IBP") ? "white" : "black",
+          }}
+          className="Smaller-Button"
+          onClick={() => handleFilterUpdate("Qualified_IBP")}
+        >
+          Qualified_IBP
+        </div>
+        <div
+          style={{
+            padding: "2px",
+            margin: "2px",
+            backgroundColor: isOptionSelected("Sapphire") ? "#6d06c6" : "white",
+            color: isOptionSelected("Sapphire") ? "white" : "black",
+          }}
+          className="Smaller-Button"
+          onClick={() => handleFilterUpdate("Sapphire")}
+        >
+          Sapphire
+        </div>
+        <div
+          style={{
+            padding: "2px",
+            margin: "2px",
+            backgroundColor: isOptionSelected("Diamond") ? "#6d06c6" : "white",
+            color: isOptionSelected("Diamond") ? "white" : "black",
+          }}
+          className="Smaller-Button"
+          onClick={() => handleFilterUpdate("Diamond")}
+        >
+          Diamond
+        </div>
+
+        <div
+          style={{
+            padding: "2px",
+            margin: "2px",
+            backgroundColor: isOptionSelected("Presidental")
+              ? "#6d06c6"
+              : "white",
+            color: isOptionSelected("Presidental") ? "white" : "black",
+          }}
+          className="Smaller-Button"
+          onClick={() => handleFilterUpdate("Presidental")}
+        >
+          Presidental
+        </div>
+        <div
+          style={{
+            padding: "2px",
+            margin: "2px",
+            paddingRight: "60px",
+            backgroundColor: isOptionSelected("Presidential_Diamond")
+              ? "#6d06c6"
+              : "white",
+            color: isOptionSelected("Presidential_Diamond") ? "white" : "black",
+          }}
+          className="Smaller-Button"
+          onClick={() => handleFilterUpdate("Presidential_Diamond")}
+        >
+          Presidential_Diamond
+        </div>
+        <div
+          style={{
+            padding: "2px",
+            margin: "2px",
+            backgroundColor: isOptionSelected(" Ruby") ? "#6d06c6" : "white",
+            color: isOptionSelected(" Ruby") ? "white" : "black",
+          }}
+          className="Smaller-Button"
+          onClick={() => handleFilterUpdate(" Ruby")}
+        >
+          Ruby
+        </div>
+
+        <div
+          style={{
+            padding: "2px",
+            margin: "2px",
+            paddingLeft: "5px",
+            paddingRight: "5px",
+            backgroundColor: isOptionSelected("Silver") ? "#6d06c6" : "white",
+            color: isOptionSelected("Silver") ? "white" : "black",
+          }}
+          className="Smaller-Button"
+          onClick={() => handleFilterUpdate("Silver")}
+        >
+          Silver
+        </div>
+
+        <div
+          style={{
+            padding: "2px",
+            margin: "2px",
+            paddingLeft: "5px",
+            paddingRight: "5px",
+            backgroundColor: isOptionSelected("Gold") ? "#6d06c6" : "white",
+            color: isOptionSelected("Gold") ? "white" : "black",
+          }}
+          className="Smaller-Button"
+          onClick={() => handleFilterUpdate("Gold")}
+        >
+          Gold
+        </div>
+        <div
+          style={{
+            padding: "2px",
+            margin: "2px",
+            paddingLeft: "5px",
+            paddingRight: "5px",
+            backgroundColor: isOptionSelected("Ambassador")
+              ? "#6d06c6"
+              : "white",
+            color: isOptionSelected("Ambassador") ? "white" : "black",
+          }}
+          className="Smaller-Button"
+          onClick={() => handleFilterUpdate("Ambassador")}
+        >
+          Ambassador
+        </div>
+
+        <span
+          className="close"
+          onClick={closeArchitecture}
+          style={{ cursor: "pointer" }}
+        >
+          <FontAwesomeIcon icon={faTimes} />
+        </span>
+      </div>
     </div>
   );
 };
 
 const ArchitectureOption2 = ({ name, onClose }) => {
+  const { filter, updateFilter } = useContext(FilterContext);
   const [isOpen, setIsOpen] = useState(true);
+  const [selectedOption, setSelectedOption] = useState("");
 
   const closeArchitecture = () => {
     setIsOpen(false);
     onClose(name);
   };
 
+  const handleOptionChange = (value) => {
+    setSelectedOption(value);
+    updateFilter({ status: value });
+  };
+
   return (
     <div className={`architecture ${isOpen ? "open" : "closed"}`}>
-      <span className="architecture-name">{name}</span>
-      <span
-        className="close"
-        onClick={closeArchitecture}
-        style={{ cursor: "pointer" }}
-      >
-        <FontAwesomeIcon icon={faTimes} />
-      </span>
+      <div style={{ display: "flex" }} className="architecture-name">
+        {/* <span>{name}</span> */}
+        <div style={{ marginLeft: "1rem", display: "flex" }}>
+          <h4 style={{ marginRight: "1vw", marginTop: ".25vh" }}>Status: </h4>
+          <select
+            style={{
+              height: "3vh",
+              border: "none",
+              borderRadius: "10px",
+              boxShadow: "0 0 2px 0 rgba(0, 0, 0, 0.2)",
+            }}
+            value={selectedOption}
+            onChange={(e) => handleOptionChange(e.target.value)}
+          >
+            <option value="">Select Option</option>
+            <option value="Active">Active</option>
+            <option value="Inactive">Inactive</option>
+          </select>
+          <span
+            style={{ margin: "3px", marginLeft: "0.5vw" }}
+            onClick={closeArchitecture}
+          >
+            <FontAwesomeIcon icon={faTimes} />
+          </span>
+        </div>
+      </div>
     </div>
   );
 };
 
 const ArchitectureOption3 = ({ name, onClose }) => {
+  const { filter, updateFilter } = useContext(FilterContext);
   const [isOpen, setIsOpen] = useState(true);
+  const [selectedOption, setSelectedOption] = useState("");
 
   const closeArchitecture = () => {
     setIsOpen(false);
     onClose(name);
   };
 
+  const handleOptionChange = (value) => {
+    setSelectedOption(value);
+    updateFilter({ type: value });
+  };
+
   return (
     <div className={`architecture ${isOpen ? "open" : "closed"}`}>
-      <span className="architecture-name">{name}</span>
-      <span
-        className="close"
-        onClick={closeArchitecture}
-        style={{ cursor: "pointer" }}
-      >
-        <FontAwesomeIcon icon={faTimes} />
-      </span>
+      <div style={{ display: "flex" }} className="architecture-name">
+        {/* <span>{name}</span> */}
+        <div style={{ marginLeft: "1rem", display: "flex" }}>
+          <h4 style={{ marginRight: "1vw", marginTop: ".25vh" }}>Type : </h4>
+          <select
+            style={{
+              height: "3vh",
+              border: "none",
+              borderRadius: "10px",
+              boxShadow: "0 0 2px 0 rgba(0, 0, 0, 0.2)",
+            }}
+            value={selectedOption}
+            onChange={(e) => handleOptionChange(e.target.value)}
+          >
+            <option value="">Select Option</option>
+            <option value="Active">Learn</option>
+            <option value="Inactive">Live</option>
+          </select>
+          <span
+            style={{ margin: "3px", marginLeft: "0.5vw" }}
+            onClick={closeArchitecture}
+          >
+            <FontAwesomeIcon icon={faTimes} />
+          </span>
+        </div>
+      </div>
     </div>
   );
 };
 
 const ArchitectureOption4 = ({ name, onClose }) => {
+  const { filter, updateFilter } = useContext(FilterContext);
   const [isOpen, setIsOpen] = useState(true);
+  const [selectedRank, setSelectedRank] = useState("");
+  const [selectedProgress, setSelectedProgress] = useState("");
 
   const closeArchitecture = () => {
     setIsOpen(false);
     onClose(name);
   };
 
+  const handleRankChange = (value) => {
+    setSelectedRank(value);
+    updateFilter({ rank: value });
+  };
+
+  const handleProgressChange = (value) => {
+    setSelectedProgress(value);
+    updateFilter({ progress: value });
+  };
+
   return (
     <div className={`architecture ${isOpen ? "open" : "closed"}`}>
-      <span className="architecture-name">{name}</span>
-      <span
-        className="close"
-        onClick={closeArchitecture}
-        style={{ cursor: "pointer" }}
-      >
-        <FontAwesomeIcon icon={faTimes} />
-      </span>
+      <div style={{ display: "flex" }} className="architecture-name">
+        <div style={{ marginLeft: "1rem", display: "flex" }}>
+          <h4 style={{ marginRight: "1vw", marginTop: ".25vh" }}>
+            Next Rank:{" "}
+          </h4>
+          <select
+            style={{
+              height: "3vh",
+              border: "none",
+              borderRadius: "10px",
+              boxShadow: "0 0 2px 0 rgba(0, 0, 0, 0.2)",
+            }}
+            value={selectedRank}
+            onChange={(e) => handleRankChange(e.target.value)}
+          >
+            <option value="">Select Rank</option>
+            <option value="Junior">Ruby</option>
+            <option value="Senior">Gold</option>
+            <option value="Senior">Platinium</option>
+            <option value="Senior">Silver</option>
+          </select>
+
+          <h4
+            style={{
+              marginLeft: "1vw",
+              marginRight: "1vw",
+              marginTop: ".25vh",
+            }}
+          >
+            Progress :{" "}
+          </h4>
+          <select
+            style={{
+              height: "3vh",
+              border: "none",
+              borderRadius: "10px",
+              boxShadow: "0 0 2px 0 rgba(0, 0, 0, 0.2)",
+            }}
+            value={selectedProgress}
+            onChange={(e) => handleProgressChange(e.target.value)}
+          >
+            <option value="">Select Progress</option>
+            <option value="Learning">Less than 10%</option>
+            <option value="Live">Betwenn 10 to 30%</option>
+            <option value="Live">Betwenn 30 to 50%</option>
+            <option value="Live">Betwenn 50 to 70%</option>
+            <option value="Live">Betwenn 70 to 90%</option>
+            <option value="Live">More than 90%</option>
+          </select>
+
+          <span
+            style={{ margin: "3px", marginLeft: "0.5vw" }}
+            onClick={closeArchitecture}
+          >
+            <FontAwesomeIcon icon={faTimes} />
+          </span>
+        </div>
+      </div>
     </div>
   );
 };
@@ -177,7 +434,7 @@ const FilterModal = () => {
           height: "3.5vh",
           marginTop: "1.5vh",
           cursor: "pointer",
-          color: isOpen ? "blue" : "inherit",
+          color: isOpen ? "#6d06c6" : "inherit",
         }}
         className="Trans-Button"
         onClick={openModal}
@@ -190,33 +447,59 @@ const FilterModal = () => {
           className="modal"
           style={{
             position: "absolute",
-            top: "30vh",
-            left: "35vw",
-            width: "40vw",
+            top: "40vh",
+            left: "45vw",
             height: "40vh",
+            width: "40vw",
           }}
         >
-          <div className="modal-content">
-            <span className="close" onClick={closeModal}>
+          <div className="modal-content" style={{ width: "30vw" }}>
+            <span
+              style={{ marginLeft: "1rem" }}
+              className="close"
+              onClick={closeModal}
+            >
               close
             </span>
-            <h2>Add a Filter</h2>
+            <h2 style={{ marginLeft: "1rem" }}>Advance Filters</h2>
 
             <div id="selectedArchitecture">{renderArchitectures()}</div>
             <div>
+              <div
+                style={{
+                  color: "#828282",
+                  fontSize: "0.95vw",
+                  marginLeft: "1rem",
+                }}
+              >
+                {" "}
+                choose a filter to add
+              </div>
               <select
                 className="dropbtn"
+                style={{
+                  margin: "1rem",
+                  height: "3vh",
+                  border: "none",
+                  borderRadius: "10px",
+                  boxShadow: "0 0 2px 0 rgba(0, 0, 0, 0.2)",
+                }}
                 onChange={(event) => selectOption(event.target.value)}
                 // multiple
               >
-                <option value="Option 1">Option 1</option>
-                <option value="Option 2">Option 2</option>
-                <option value="Option 3">Option 3</option>
-                <option value="Option 4">Option 4</option>
+                <option value="">Select</option>
+                <option value="Option 1">LifeTime Rank</option>
+                <option value="Option 2">status</option>
+                <option value="Option 3">Type</option>
+                <option value="Option 4">Next Rank</option>
               </select>
             </div>
             <div>
-              <button className="Smaller-Button" onClick={applyFilters}>
+              <button
+                style={{ marginLeft: "1rem" }}
+                className="Smaller-Button"
+                onClick={applyFilters}
+              >
                 Apply
               </button>
               <button onClick={resetFilters}>Reset All</button>
