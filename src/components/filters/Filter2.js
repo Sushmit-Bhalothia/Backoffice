@@ -1,19 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilter, faTable, faBars } from "@fortawesome/free-solid-svg-icons";
 import FilterDropdown from "./filtersDropdown";
 import CycleDropDown from "./cycle-dropdown";
+import { FilterContext } from "../contexts/FilterContext";
 
 function Filter() {
+  const { filter, updateFilter } = useContext(FilterContext);
   const [isFilterActive, setIsFilterActive] = useState(false);
-  const [displayMode, setDisplayMode] = useState("table");
 
   const handleFilterToggle = () => {
     setIsFilterActive(!isFilterActive);
   };
 
   const handleDisplayModeChange = (mode) => {
-    setDisplayMode(mode);
+    updateFilter({ displayMode: mode });
   };
 
   return (
@@ -59,7 +60,9 @@ function Filter() {
       >
         <FontAwesomeIcon
           icon={faTable}
-          style={{ color: displayMode === "cards" ? "#5d01a2" : "black" }}
+          style={{
+            color: filter.displayMode === "cards" ? "#5d01a2" : "black",
+          }}
         />
       </div>
       <div
@@ -69,7 +72,9 @@ function Filter() {
       >
         <FontAwesomeIcon
           icon={faBars}
-          style={{ color: displayMode === "table" ? "#5d01a2" : "black" }}
+          style={{
+            color: filter.displayMode === "table" ? "#5d01a2" : "black",
+          }}
         />
       </div>
     </div>

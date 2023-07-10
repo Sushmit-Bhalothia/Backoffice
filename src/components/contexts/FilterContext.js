@@ -13,6 +13,7 @@ export const FilterProvider = ({ children }) => {
     NextRank: "",
     Progress: "",
     LifeTimeRank: "",
+    displayMode: "table",
   }); // Default filter values
 
   // Function to update the filter
