@@ -39,7 +39,7 @@ function SocialMedia() {
           <span class="overlay-span-2">Contact Support</span>
 
           <div className="signInConponents ">
-            <div class="Welcome-back ">Almost there!</div>
+            <h2 class="Welcome-back ">Almost there!</h2>
 
             <p className="FormText">
               {" "}

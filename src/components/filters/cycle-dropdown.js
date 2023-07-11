@@ -18,8 +18,9 @@ const FilterDropdown = () => {
             border: "none",
             paddingTop: "1vh",
             paddingRight: "0.5vw",
+            fontSize: "medium",
             //width: "30vw",
-            fontSize: "2vh",
+
             textAlign: "center",
           }}
           value={selectedFilter}

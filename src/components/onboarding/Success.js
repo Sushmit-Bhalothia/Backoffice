@@ -20,7 +20,7 @@ function Success() {
         </div>
         <div>
           <div className="Agreements-Section2">
-            Be Backoffice ™ 2021. All rights reserved
+            Be Backoffice ™ 2023. All rights reserved
           </div>
         </div>
       </div>
@@ -52,7 +52,7 @@ function Success() {
         {/* <SignInForm /> */}
         <div className="Rectangle-1092">
           <div className="signInConponents">
-            <div class="Welcome-back "> Thank you!</div>
+            <h2 class="Welcome-back "> Thank you!</h2>
             <p className="FormText">
               {" "}
               You are all done and ready to explore the beta version of the app.

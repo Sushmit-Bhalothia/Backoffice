@@ -11,7 +11,6 @@ const ReviewComponent = ({ rating }) => {
 
         padding: "0.25vh",
         height: "2.5vh",
-        fontSize: "1.5vh",
       }}
     >
       <div
@@ -35,12 +34,17 @@ const ReviewComponent = ({ rating }) => {
         style={{
           backgroundColor: "#6d06c6",
           padding: "0.25vh",
-          fontSize: "1.125vh",
+
           borderRadius: "5px",
         }}
       >
         {Array.from({ length: rating }, (_, index) => (
-          <span key={index} role="img" aria-label="star">
+          <span
+            key={index}
+            role="img"
+            aria-label="star"
+            style={{ fontSize: "small" }}
+          >
             ⭐️
           </span>
         ))}

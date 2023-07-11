@@ -50,8 +50,10 @@ const BugReportModal = () => {
           borderRadius: "5px",
         }}
       >
-        <FontAwesomeIcon icon={faBug} color="#6d06c6" size="2x" />
-        <div style={{ marginLeft: "1vw", paddingTop: "0.4vh" }}>
+        <FontAwesomeIcon icon={faBug} color="#6d06c6" />
+        <div
+          style={{ marginLeft: "1vw", paddingTop: "0.4vh", fontSize: "2vh" }}
+        >
           Report A Bug
         </div>
       </div>
@@ -74,7 +76,7 @@ const BugReportModal = () => {
             fontFamily: "Montserrat",
 
             border: "none",
-            height: "45vh",
+            height: "50vh",
             width: "25vw",
 
             backgroundColor: "white",

@@ -17,7 +17,7 @@ const Dropdown = () => {
   return (
     <>
       <select
-        style={{ border: "none", height: "2.5vh", fontSize: "1.75vh" }}
+        style={{ border: "none", height: "2.5vh" }}
         value={selectedOption}
         onChange={handleOptionChange}
       >

@@ -41,7 +41,7 @@ export default function ProfileModal() {
           style={{
             textAlign: "center",
             justifyContent: "center",
-            fontSize: "2.5vh",
+
             fontFamily: "Montserrat",
             marginTop: "3vh",
             marginLeft: "2vh",

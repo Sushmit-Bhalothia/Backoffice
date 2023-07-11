@@ -33,39 +33,56 @@ const ArchitectureOption1 = ({ name, onClose }) => {
         </h4>
         <div
           style={{
+            cursor: "pointer",
             padding: "2px",
-            paddingRight: "15px",
+            paddingTop: "1vh",
             margin: "2px",
+            height: "3vh",
+
+            boxShadow: "0 0 1px 0 rgba(0, 0, 0, 0.2)",
+            borderRadius: "10px",
+            paddingTop: "0.5vh",
             backgroundColor: isOptionSelected("Qualified_IBP")
               ? "#6d06c6"
               : "white",
             color: isOptionSelected("Qualified_IBP") ? "white" : "black",
           }}
-          className="Smaller-Button"
           onClick={() => handleFilterUpdate("Qualified_IBP")}
         >
           Qualified_IBP
         </div>
         <div
           style={{
+            cursor: "pointer",
             padding: "2px",
+            paddingTop: "1vh",
             margin: "2px",
+            height: "3vh",
+
+            boxShadow: "0 0 1px 0 rgba(0, 0, 0, 0.2)",
+            borderRadius: "10px",
+            paddingTop: "0.5vh",
             backgroundColor: isOptionSelected("Sapphire") ? "#6d06c6" : "white",
             color: isOptionSelected("Sapphire") ? "white" : "black",
           }}
-          className="Smaller-Button"
           onClick={() => handleFilterUpdate("Sapphire")}
         >
           Sapphire
         </div>
         <div
           style={{
+            cursor: "pointer",
             padding: "2px",
+            paddingTop: "1vh",
             margin: "2px",
+            height: "3vh",
+
+            boxShadow: "0 0 1px 0 rgba(0, 0, 0, 0.2)",
+            borderRadius: "10px",
+            paddingTop: "0.5vh",
             backgroundColor: isOptionSelected("Diamond") ? "#6d06c6" : "white",
             color: isOptionSelected("Diamond") ? "white" : "black",
           }}
-          className="Smaller-Button"
           onClick={() => handleFilterUpdate("Diamond")}
         >
           Diamond
@@ -73,41 +90,60 @@ const ArchitectureOption1 = ({ name, onClose }) => {
 
         <div
           style={{
+            cursor: "pointer",
             padding: "2px",
+            paddingTop: "1vh",
             margin: "2px",
+            height: "3vh",
+
+            boxShadow: "0 0 1px 0 rgba(0, 0, 0, 0.2)",
+            borderRadius: "10px",
+            paddingTop: "0.5vh",
+
             backgroundColor: isOptionSelected("Presidental")
               ? "#6d06c6"
               : "white",
             color: isOptionSelected("Presidental") ? "white" : "black",
           }}
-          className="Smaller-Button"
+          // className="Smaller-Button"
           onClick={() => handleFilterUpdate("Presidental")}
         >
           Presidental
         </div>
         <div
           style={{
+            cursor: "pointer",
             padding: "2px",
+            paddingTop: "1vh",
             margin: "2px",
-            paddingRight: "60px",
+            height: "3vh",
+
+            boxShadow: "0 0 1px 0 rgba(0, 0, 0, 0.2)",
+            borderRadius: "10px",
+            paddingTop: "0.5vh",
             backgroundColor: isOptionSelected("Presidential_Diamond")
               ? "#6d06c6"
               : "white",
             color: isOptionSelected("Presidential_Diamond") ? "white" : "black",
           }}
-          className="Smaller-Button"
           onClick={() => handleFilterUpdate("Presidential_Diamond")}
         >
           Presidential_Diamond
         </div>
         <div
           style={{
+            cursor: "pointer",
             padding: "2px",
+            paddingTop: "1vh",
             margin: "2px",
+            height: "3vh",
+
+            boxShadow: "0 0 1px 0 rgba(0, 0, 0, 0.2)",
+            borderRadius: "10px",
+            paddingTop: "0.5vh",
             backgroundColor: isOptionSelected(" Ruby") ? "#6d06c6" : "white",
             color: isOptionSelected(" Ruby") ? "white" : "black",
           }}
-          className="Smaller-Button"
           onClick={() => handleFilterUpdate(" Ruby")}
         >
           Ruby
@@ -115,14 +151,18 @@ const ArchitectureOption1 = ({ name, onClose }) => {
 
         <div
           style={{
+            cursor: "pointer",
             padding: "2px",
+            paddingTop: "1vh",
             margin: "2px",
-            paddingLeft: "5px",
-            paddingRight: "5px",
+            height: "3vh",
+
+            boxShadow: "0 0 1px 0 rgba(0, 0, 0, 0.2)",
+            borderRadius: "10px",
+            paddingTop: "0.5vh",
             backgroundColor: isOptionSelected("Silver") ? "#6d06c6" : "white",
             color: isOptionSelected("Silver") ? "white" : "black",
           }}
-          className="Smaller-Button"
           onClick={() => handleFilterUpdate("Silver")}
         >
           Silver
@@ -130,30 +170,38 @@ const ArchitectureOption1 = ({ name, onClose }) => {
 
         <div
           style={{
+            cursor: "pointer",
             padding: "2px",
+            paddingTop: "1vh",
             margin: "2px",
-            paddingLeft: "5px",
-            paddingRight: "5px",
+            height: "3vh",
+
+            boxShadow: "0 0 1px 0 rgba(0, 0, 0, 0.2)",
+            borderRadius: "10px",
+            paddingTop: "0.5vh",
             backgroundColor: isOptionSelected("Gold") ? "#6d06c6" : "white",
             color: isOptionSelected("Gold") ? "white" : "black",
           }}
-          className="Smaller-Button"
           onClick={() => handleFilterUpdate("Gold")}
         >
           Gold
         </div>
         <div
           style={{
+            cursor: "pointer",
             padding: "2px",
+            paddingTop: "1vh",
             margin: "2px",
-            paddingLeft: "5px",
-            paddingRight: "5px",
+            height: "3vh",
+
+            boxShadow: "0 0 1px 0 rgba(0, 0, 0, 0.2)",
+            borderRadius: "10px",
+            paddingTop: "0.5vh",
             backgroundColor: isOptionSelected("Ambassador")
               ? "#6d06c6"
               : "white",
             color: isOptionSelected("Ambassador") ? "white" : "black",
           }}
-          className="Smaller-Button"
           onClick={() => handleFilterUpdate("Ambassador")}
         >
           Ambassador
@@ -162,7 +210,7 @@ const ArchitectureOption1 = ({ name, onClose }) => {
         <span
           className="close"
           onClick={closeArchitecture}
-          style={{ cursor: "pointer" }}
+          style={{ cursor: "pointer", margin: "0.5vh" }}
         >
           <FontAwesomeIcon icon={faTimes} />
         </span>
@@ -288,10 +336,13 @@ const ArchitectureOption4 = ({ name, onClose }) => {
 
   return (
     <div className={`architecture ${isOpen ? "open" : "closed"}`}>
-      <div style={{ display: "flex" }} className="architecture-name">
+      <div
+        style={{ display: "flex", overflow: "scroll" }}
+        className="architecture-name"
+      >
         <div style={{ marginLeft: "1rem", display: "flex" }}>
           <h4 style={{ marginRight: "1vw", marginTop: ".25vh" }}>
-            Next Rank:{" "}
+            Next_Rank:{" "}
           </h4>
           <select
             style={{
@@ -317,7 +368,7 @@ const ArchitectureOption4 = ({ name, onClose }) => {
               marginTop: ".25vh",
             }}
           >
-            Progress :{" "}
+            Progress:{" "}
           </h4>
           <select
             style={{
@@ -443,19 +494,20 @@ const FilterModal = () => {
         Filters
       </div>
       {isOpen && (
-        <div
+        <modal
           className="modal"
           style={{
             position: "absolute",
-            top: "40vh",
+            top: "30vh",
             left: "45vw",
             height: "40vh",
             width: "40vw",
+            zIndex: 10,
           }}
         >
           <div className="modal-content" style={{ width: "30vw" }}>
             <span
-              style={{ marginLeft: "1rem" }}
+              style={{ marginLeft: "1rem", cursor: "pointer" }}
               className="close"
               onClick={closeModal}
             >
@@ -468,7 +520,7 @@ const FilterModal = () => {
               <div
                 style={{
                   color: "#828282",
-                  fontSize: "0.95vw",
+
                   marginLeft: "1rem",
                 }}
               >
@@ -505,7 +557,7 @@ const FilterModal = () => {
               <button onClick={resetFilters}>Reset All</button>
             </div>
           </div>
-        </div>
+        </modal>
       )}
     </div>
   );

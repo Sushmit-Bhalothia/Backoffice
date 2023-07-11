@@ -7,7 +7,7 @@ import ReportBug from "../sharedComponents/ReportBug";
 function OptionalSide() {
   const navigate = useNavigate();
   return (
-    <div className="navi" style={{ width: "18vw" }}>
+    <div className="navi" style={{ width: "18vw", fontSize: "2.5vh" }}>
       <ProfileModal />
       <div
         style={{

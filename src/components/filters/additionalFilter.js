@@ -25,6 +25,7 @@ function Addfilter() {
             className={active === "1" ? "activeAdditionalFilter" : ""}
             style={{
               marginTop: "2vh",
+
               // //backgroundColor: "blue",
               height: "1px",
               width: "100%",

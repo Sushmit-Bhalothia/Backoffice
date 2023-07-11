@@ -208,8 +208,10 @@ function Hot100_1() {
   return (
     <div>
       <div className="content-heading">
-        <h3> Top Enrollers</h3>
-        <SearchBar style={{ width: "40vw" }} />
+        <h2> Top Enrollers</h2>
+        <div id="BodyFilter">
+          <SearchBar style={{ width: "40vw" }} />
+        </div>
       </div>
       <div className="content-subheading">
         Some discription of the page here is list my top enrollers

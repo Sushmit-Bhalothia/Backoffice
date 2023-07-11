@@ -6,9 +6,9 @@ function EmailSentModal() {
   return (
     <div className="Rectangle-1092">
       <div className="signInConponents">
-        <div class="Welcome-back  " style={{ marginTop: "5vh" }}>
+        <h2 class="Welcome-back  " style={{ marginTop: "5vh" }}>
           Email Sent !
-        </div>
+        </h2>
         <p className="FormText">
           {" "}
           Please, enter the email address you used to create your Be account and

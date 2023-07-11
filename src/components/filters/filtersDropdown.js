@@ -14,7 +14,11 @@ const FilterDropdown = () => {
 
   return (
     <div
-      style={{ marginTop: "1vh", paddingleft: "2vw", paddingRight: "1vw" }}
+      style={{
+        marginTop: "1vh",
+        paddingleft: "2vw",
+        paddingRight: "1vw",
+      }}
       className="Trans-Button"
     >
       <select
@@ -23,8 +27,9 @@ const FilterDropdown = () => {
           border: "none",
           paddingTop: "1vh",
           paddingRight: "0.5vw",
-          // fontSize: "2vh",
+
           textAlign: "center",
+          fontSize: "medium",
 
           // padding
         }}

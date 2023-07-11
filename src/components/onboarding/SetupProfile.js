@@ -28,7 +28,7 @@ function SetUpProfile() {
         <div
           // id="my-superset-container"
 
-          style={{ height: "82vh" }}
+          style={{ height: "83vh" }}
           className="Rectangle-1092"
         >
           <div class="overlay-span-1">
@@ -38,8 +38,8 @@ function SetUpProfile() {
 
           <span class="overlay-span-2">Contact Support</span>
 
-          <div className="signInConponents " style={{ paddingTop: "60px" }}>
-            <div class="Welcome-back ">Set Up Profile!</div>
+          <div className="signInConponents ">
+            <h2 class="Welcome-back ">Set Up Profile!</h2>
 
             <p className="FormText">
               Select your preferred language to continue
@@ -100,7 +100,9 @@ function SetUpProfile() {
           </div>
           <div className="signInConponents FormText">
             If any of the info are incorrect above, please -
-            <span class="clickable">click here</span>
+            <span style={{ marginBottom: "1vh" }} class="clickable">
+              click here
+            </span>
           </div>
           <div className="signInConponents " style={{ display: "flex" }}>
             <button

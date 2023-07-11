@@ -2,11 +2,12 @@ import "../../css/main.css";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ProfileModal from "../sharedComponents/optionalprofilemodal";
+import ReportBug from "../sharedComponents/ReportBug";
 
 function OptionalSide() {
   const navigate = useNavigate();
   return (
-    <div className="navi" style={{ width: "18vw" }}>
+    <div className="navi" style={{ width: "18vw", fontSize: "2.5vh" }}>
       <ProfileModal />
       <div
         style={{
@@ -87,6 +88,7 @@ function OptionalSide() {
           Rank Progress
         </div>
       </div>
+      <ReportBug />
     </div>
   );
 }

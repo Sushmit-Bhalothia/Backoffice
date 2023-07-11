@@ -6,9 +6,9 @@ function ForgotForm() {
   return (
     <div className="Rectangle-1092">
       <div className="signInConponents">
-        <div class="Welcome-back " style={{ marginTop: "5vh" }}>
+        <h2 class="Welcome-back " style={{ marginTop: "5vh" }}>
           Forgot Password ?
-        </div>
+        </h2>
         <p className="FormText" style={{ marginBottom: "5vh" }}>
           Please, enter the email address you used to create your Be account and
         </p>

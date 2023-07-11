@@ -20,7 +20,7 @@ function Welcome() {
         </div>
         <div>
           <div className="Agreements-Section2">
-            Be Backoffice ™ 2021. All rights reserved
+            Be Backoffice ™ 2023. All rights reserved
           </div>
         </div>
       </div>
@@ -41,10 +41,10 @@ function Welcome() {
         {/* <SignInForm /> */}
         <div className="Rectangle-1092">
           <div className="signInConponents">
-            <div class="Welcome-back ">
+            <h2 class="Welcome-back ">
               {" "}
               Welcome to the beta version of your Be backoffice reporting CRM!
-            </div>
+            </h2>
             <p className="FormText">
               {" "}
               The application is still in development and we will continue add

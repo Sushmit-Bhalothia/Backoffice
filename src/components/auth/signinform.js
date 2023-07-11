@@ -6,9 +6,9 @@ function SignInForm() {
   return (
     <div className="Rectangle-1092">
       <div className="signInConponents">
-        <div class="Welcome-back " style={{ marginTop: "5vh" }}>
+        <h2 class="Welcome-back " style={{ marginTop: "5vh" }}>
           Welcome back!
-        </div>
+        </h2>
 
         <label className="Label" htmlFor="loginId">
           Login ID

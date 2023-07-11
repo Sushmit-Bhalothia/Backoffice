@@ -6,6 +6,7 @@
   --lilac: #fdfaff;
   --grey-82: #828282;
   --main-purple: #6d06c6;
+  font-family: "Montserrat";
 }
 
 /* this is css for login and onboarding pages --
@@ -69,7 +70,7 @@
 
   margin-left: 30%;
   font-family: Montserrat;
-  font-size: 12px;
+
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
@@ -99,7 +100,7 @@
   justify-content: space-around;
   flex-direction: row;
   font-family: Montserrat;
-  font-size: 14px;
+
   font-weight: 500;
   font-stretch: normal;
   font-style: normal;
@@ -115,7 +116,7 @@
   justify-content: space-around;
   flex-direction: row;
   font-family: Montserrat;
-  font-size: 12px;
+
   font-weight: 500;
   font-stretch: normal;
   font-style: normal;
@@ -144,7 +145,7 @@
 
   /* margin: 1px 8px; */
   font-family: Montserrat;
-  font-size: 1.25vw;
+
   font-weight: 500;
   font-stretch: normal;
   font-style: normal;
@@ -178,7 +179,7 @@
   cursor: pointer;
   margin-left: 0vw;
   font-family: Montserrat;
-  font-size: 1.25 vw;
+
   font-weight: 500;
   font-stretch: normal;
   font-style: normal;
@@ -225,7 +226,6 @@
   margin: 2vh auto;
 
   font-family: Montserrat;
-  font-size: 3vh;
 
   font-weight: 600;
   font-stretch: normal;
@@ -242,7 +242,7 @@
   margin: 1vh 2vh 1vh;
   margin-top: 0.5vh;
   font-family: Montserrat;
-  font-size: 2vh;
+
   font-weight: 600;
   font-stretch: normal;
   font-style: normal;
@@ -254,7 +254,7 @@
 .Label {
   font-family: Montserrat;
   /* display: block; */
-  font-size: 1.75vh;
+
   margin: 2vh 1vw;
   font-weight: 500;
   /* width: 100%; */
@@ -275,7 +275,7 @@
   border: none;
   border-bottom: solid #333333 1 px;
   font-family: Montserrat;
-  font-size: 1.75vh;
+
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
@@ -309,7 +309,7 @@
   margin: auto;
   /* margin-top: 3%; */
   font-family: Montserrat;
-  font-size: 2vh;
+
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
@@ -385,7 +385,7 @@
 }
 .clickable-button {
   font-family: Montserrat;
-  font-size: 2vh;
+
   font-weight: 500;
   font-stretch: normal;
   font-style: normal;
@@ -474,19 +474,14 @@
     /* padding: auto; */
     margin: 5vh 10vw 0vh 20%;
   }
-  .Label {
-    font-size: 2vh;
-  }
+
   .Input {
-    font-size: 2vh;
     height: 4vh;
   }
   .Welcome-back {
-    font-size: 3.5vh;
     margin-top: 18vh;
   }
   .FormText {
-    font-size: 2.5vh;
     margin-bottom: 5vh;
   }
   .overlay-span-2 {

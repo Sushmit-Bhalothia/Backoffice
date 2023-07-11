@@ -47,8 +47,10 @@ function Snapshot4() {
   return (
     <div>
       <div className="content-heading">
-        <h3> New Promoted Team Ranks</h3>
-        <SearchBar style={{ width: "40vw" }} />
+        <h2> New Promoted Team Ranks</h2>
+        <div id="BodyFilter">
+          <SearchBar />
+        </div>
       </div>
       <div className="content-subheading">
         This report contains your team ranks info or your enrolment tree

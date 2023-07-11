@@ -27,15 +27,16 @@ const TableComponent = ({ data }) => {
           borderCollapse: "collapse",
           overflowX: "scroll",
         }}
+        className="table"
       >
         <thead>
           <tr>
-            <th style={{ border: "none", padding: "2vh" }}>Customer ID</th>
-            <th style={{ border: "none" }}>Name</th>
-            <th style={{ border: "none" }}>Achieved Rank</th>
-            <th style={{ border: "none" }}>Direct Sponsor</th>
-            <th style={{ border: "none" }}>Enrollment Level</th>
-            <th style={{ border: "none" }}>View Profile</th>
+            <th className="table-data">Customer_ID</th>
+            <th className="table-data">Name</th>
+            <th className="table-data">Achieved_Rank</th>
+            <th className="table-data">Direct_Sponsor</th>
+            <th className="table-data">Enrollment_Level</th>
+            <th className="table-data">View_Profile</th>
           </tr>
         </thead>
         <tbody style={{ textAlign: "center" }}>
@@ -47,11 +48,11 @@ const TableComponent = ({ data }) => {
                 height: "5.5vh",
               }}
             >
-              <td>{entry.customerId}</td>
-              <td>{entry.name}</td>
-              <td>{entry.achievedRank}</td>
-              <td>{entry.directSponsor}</td>
-              <td>{entry.enrollmentLevel}</td>
+              <td className="table-data">{entry.customerId}</td>
+              <td className="table-data">{entry.name}</td>
+              <td className="table-data">{entry.achievedRank}</td>
+              <td className="table-data">{entry.directSponsor}</td>
+              <td className="table-data">{entry.enrollmentLevel}</td>
               <td>
                 <button
                   className="Smaller-Button"

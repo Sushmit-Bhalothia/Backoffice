@@ -130,9 +130,9 @@ function Snapshot1() {
   return (
     <div>
       <div className="content-heading">
-        <h3> New Promoted Team Ranks</h3>
+        <h2> New Promoted Team Ranks</h2>
         <div id="BodyFilter">
-          <SearchBar style={{ width: "40vw" }} />
+          <SearchBar />
         </div>
       </div>
       <div className="content-subheading">
