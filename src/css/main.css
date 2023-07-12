@@ -7,8 +7,13 @@
   --grey-82: #828282;
   --main-purple: #6d06c6;
   --grey-f-2: #f2f2f2;
-  font-size: large;
+  font-size: 18px;
   font-family: Montserrat;
+}
+.single-line {
+  white-space: nowrap; /* Prevents text from wrapping */
+  overflow: hidden; /* Hides any overflow */
+  text-overflow: ellipsis; /* Truncates the text with an ellipsis (...) if it overflows */
 }
 .outer {
   display: flex;
@@ -57,7 +62,6 @@ iframe {
   /* justify-content: center; */
 
   font-family: Montserrat;
-  /* font-size: 2.25vh; */
 
   font-weight: normal;
   font-stretch: normal;
@@ -95,16 +99,15 @@ iframe {
 .Filters {
   width: 80vw;
   display: flex;
-  font-size: medium;
 }
 .left-Filter {
-  width: 40vw;
+  width: 42vw;
   margin-top: 3vh;
   display: flex;
   justify-content: left;
 }
 .right-Filter {
-  width: 40vw;
+  width: 50vw;
   margin-top: 3vh;
   display: flex;
   justify-content: right;
@@ -118,7 +121,7 @@ iframe {
 }
 
 .selected-cycle {
-  width: 18vw;
+  /* width: 18vw; */
   height: 2.25vh;
 
   text-align: left;
@@ -293,13 +296,74 @@ iframe {
 }
 
 @media screen and (max-width: 1050px) {
-  iframe {
-    width: 100vw;
+  #BodyFilter {
+    display: none;
   }
+
   .card {
     width: 40vw;
 
     height: 28vh;
+  }
+  .hot100-card {
+    width: 45vw;
+  }
+  #hot100-Top-card-img1 {
+    /* display: none; */
+    top: vh;
+    left: 13vw;
+  }
+  .Trans-Button {
+    width: auto;
+    box-shadow: none;
+  }
+  .hot100-Top-card {
+    width: 45vw;
+    padding-top: 3vh;
+    margin-bottom: 5vh;
+  }
+  .Filters {
+    flex-direction: column;
+    width: 80vw;
+  }
+
+  .left-Filter {
+    width: 75vw;
+    justify-content: left;
+
+    margin-left: 2.5vw;
+    margin-bottom: 1vh;
+    border-radius: 10px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+    background-color: var(--white);
+  }
+  .right-Filter {
+    width: 75vw;
+    justify-content: right;
+    margin-top: 0vh;
+    margin-left: 2.5vw;
+    margin-bottom: 1vh;
+    border-radius: 10px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+    background-color: var(--white);
+  }
+  .root-filters-text {
+    padding-left: 5vw;
+  }
+  .navi {
+    display: none;
+  }
+  .table-container {
+    width: 100vw;
+  }
+  .table {
+    width: 100vw;
+  }
+  .left-Filter {
+    width: 90vw;
+  }
+  .right-Filter {
+    width: 90vw;
   }
 }
 @media screen and (max-width: 600px) {
@@ -319,7 +383,6 @@ iframe {
   }
 
   .additionalFilter {
-    /* font-size: 1.5vh; */
     margin: 1vh;
   }
   .table-container {
@@ -340,17 +403,19 @@ iframe {
 
   .left-Filter {
     width: 95vw;
-    justify-content: space-between;
+    justify-content: left;
 
     margin-left: 2.5vw;
     margin-bottom: 1vh;
+
     border-radius: 10px;
     box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
     background-color: var(--white);
   }
   .right-Filter {
     width: 95vw;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+
     margin-top: 0vh;
     margin-left: 2.5vw;
     margin-bottom: 1vh;
@@ -412,3 +477,100 @@ iframe {
     margin: auto;
   }
 }
+
+/* 
+ */
+
+/* .carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+} */
+.carousel {
+  position: relative;
+  width: 100vw;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.carousel-slide {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+
+.slide {
+  flex: 0 0 100%;
+}
+
+.slide-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+}
+
+.left-icon,
+.right-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.left-icon {
+  left: 16px;
+}
+
+.right-icon {
+  right: 16px;
+}
+
+.slide.active {
+  transform: translateX(0);
+}
+.carousel-indicators {
+  display: flex;
+  position: absolute;
+  bottom: 50px;
+  left: 45%;
+}
+.indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: gray;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.indicator.active {
+  background-color: white;
+}
+
+/* .indicator {
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: gray;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.indicator.active {
+  background-color: white;
+} */

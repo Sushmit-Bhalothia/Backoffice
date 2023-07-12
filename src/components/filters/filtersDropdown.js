@@ -15,21 +15,34 @@ const FilterDropdown = () => {
   return (
     <div
       style={{
-        marginTop: "1vh",
+        marginTop: "1.5vh",
         paddingleft: "2vw",
-        paddingRight: "1vw",
+        // paddingRight: "1vw",
+        display: "flex",
+        height: "4vh",
+        marginRight: "1vw",
+        marginLeft: "1vw",
+        paddingTop: "0",
+        width: "auto",
       }}
       className="Trans-Button"
     >
+      <div style={{ marginTop: "1vh" }} className="root-filters">
+        Sort:
+      </div>
       <select
         id="select-filter"
         style={{
           border: "none",
-          paddingTop: "1vh",
-          paddingRight: "0.5vw",
+          paddingTop: "2.25vh",
+          fontSize: "18px",
+
+          width: "auto",
 
           textAlign: "center",
-          fontSize: "medium",
+
+          marginTop: "-2.0vh",
+          marginRight: "4vw",
 
           // padding
         }}

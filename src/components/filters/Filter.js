@@ -15,7 +15,6 @@ function Filter() {
   return (
     <div className="Filters">
       <div className="left-Filter">
-        <div className="root-filters root-filters-text">Show:</div>
         <div className="root-filters">
           <CycleDropDown />
         </div>
@@ -23,9 +22,6 @@ function Filter() {
       <div className="right-Filter">
         <FilterModal />
 
-        <div style={{ marginTop: "1.85vh" }} className="root-filters ">
-          Sort by:
-        </div>
         <FilterDropdown />
         <div id="column-selector" className="root-filters">
           <FontAwesomeIcon icon={faColumns} />

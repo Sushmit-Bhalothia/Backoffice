@@ -485,9 +485,12 @@ const FilterModal = () => {
           height: "3.5vh",
           marginTop: "1.5vh",
           cursor: "pointer",
+          width: "auto",
+          paddingRight: "1vw",
+          paddingLeft: "1vw",
           color: isOpen ? "#6d06c6" : "inherit",
         }}
-        className="Trans-Button"
+        className="Trans-Button "
         onClick={openModal}
       >
         <FontAwesomeIcon icon={faFilter} style={{ marginRight: "0.5rem" }} />

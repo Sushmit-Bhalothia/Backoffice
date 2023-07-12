@@ -51,9 +51,7 @@ const BugReportModal = () => {
         }}
       >
         <FontAwesomeIcon icon={faBug} color="#6d06c6" />
-        <div
-          style={{ marginLeft: "1vw", paddingTop: "0.4vh", fontSize: "2vh" }}
-        >
+        <div style={{ marginLeft: "1vw", paddingTop: "0.4vh" }}>
           Report A Bug
         </div>
       </div>

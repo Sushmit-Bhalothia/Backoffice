@@ -36,7 +36,7 @@ function Card({ ranking }) {
               height: "5vh",
               zIndex: "2",
               color: "#5d01a2",
-              // fontSize: "2vh", // Increase the font size here
+
               position: "absolute",
               //   top: "vh",
             }}

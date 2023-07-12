@@ -10,7 +10,7 @@ const ReviewComponent = ({ rating }) => {
         alignitems: "center",
 
         padding: "0.25vh",
-        height: "2.5vh",
+        height: "22px",
       }}
     >
       <div
@@ -33,7 +33,7 @@ const ReviewComponent = ({ rating }) => {
         className="rating-display"
         style={{
           backgroundColor: "#6d06c6",
-          padding: "0.25vh",
+          // padding: "0.25vh",
 
           borderRadius: "5px",
         }}

@@ -18,7 +18,10 @@ const FilterDropdown = () => {
             border: "none",
             paddingTop: "1vh",
             paddingRight: "0.5vw",
-            fontSize: "medium",
+            fontSize: "18px",
+            width: "auto",
+            // paddingRight: "5vw",
+
             //width: "30vw",
 
             textAlign: "center",
@@ -31,7 +34,9 @@ const FilterDropdown = () => {
           <option value="Cycle 3: 14 July to 15 August(2022)">Cycle 3</option>
         </select>
       </div>
-      <div className="root-filters selected-cycle">{selectedFilter}</div>
+      <div className="root-filters selected-cycle" style={{ fontSize: "14px" }}>
+        {selectedFilter}
+      </div>
     </div>
   );
 };

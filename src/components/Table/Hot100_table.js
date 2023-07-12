@@ -23,11 +23,11 @@ const TableComponent = ({ data }) => {
       <table className="table">
         <thead>
           <tr>
-            <th className="table-data">Position</th>
-            <th className="table-data">Customer ID</th>
-            <th className="table-data">Name</th>
-            <th className="table-data">Paid Rank</th>
-            <th className="table-data">Country</th>
+            <th className="table-data single-line ">Position</th>
+            <th className="table-data single-line ">Customer ID</th>
+            <th className="table-data single-line ">Name</th>
+            <th className="table-data single-line ">Paid Rank</th>
+            <th className="table-data single-line ">Country</th>
           </tr>
         </thead>
         <tbody style={{ textAlign: "center" }}>
@@ -39,7 +39,7 @@ const TableComponent = ({ data }) => {
                 height: "6vh",
               }}
             >
-              <td className="table-data">{entry.customerId}</td>
+              <td className="table-data ">{entry.customerId}</td>
               <td className="table-data">{entry.name}</td>
               <td className="table-data">{entry.achievedRank}</td>
               <td className="table-data">{entry.directSponsor}</td>

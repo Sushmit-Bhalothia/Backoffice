@@ -19,20 +19,18 @@ function Filter() {
   };
 
   return (
-    <div className="Filters">
-      <div className="left-Filter">
-        <div style={{ marginTop: "3vh" }} className="root-filters">
+    <div className="Filters ">
+      <div className="left-Filter single-line ">
+        {/* <div style={{ marginTop: "2.5vh" }} className="root-filters">
           Show:
-        </div>
+        </div> */}
         <div className="root-filters">
           <CycleDropDown />
         </div>
       </div>
-      <div className="right-Filter">
+      <div className="right-Filter single-line">
         <FilterModal />
-        <div style={{ marginTop: "2.25vh" }} className="root-filters">
-          Sort by:
-        </div>
+
         <FilterDropdown />
         <div
           style={{ marginTop: "2.0vh", cursor: "pointer" }}

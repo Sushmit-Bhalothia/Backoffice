@@ -7,7 +7,14 @@ const Dropdown = () => {
   const handleLanguageChange = () => {
     updateLanguage("fr"); // Change the language to 'fr' (French)
   };
-  const options = ["English", "French", "Portuguese"];
+  const options = [
+    "🇺🇸  English",
+    "🇫🇷  French",
+    "🇵🇹  Portuguese",
+    "🇷🇺  Russian",
+    "🇯🇵 Japanese",
+    "🇮🇹 Italian",
+  ];
   const [selectedOption, setSelectedOption] = useState("English");
 
   const handleOptionChange = (event) => {
@@ -17,7 +24,7 @@ const Dropdown = () => {
   return (
     <>
       <select
-        style={{ border: "none", height: "2.5vh" }}
+        style={{ border: "none" }}
         value={selectedOption}
         onChange={handleOptionChange}
       >

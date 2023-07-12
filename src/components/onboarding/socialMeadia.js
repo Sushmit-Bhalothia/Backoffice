@@ -70,7 +70,7 @@ function SocialMedia() {
 
           <div className="signInConponents ">
             <span
-              style={{ cursor: "pointer", fontSize: "2vh", marginTop: "1vh" }}
+              style={{ cursor: "pointer", marginTop: "1vh" }}
               onClick={() => {
                 navigate("/welcome");
               }}
