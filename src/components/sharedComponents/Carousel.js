@@ -5,14 +5,17 @@ import {
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 
-import crouse1 from "../../lib/profile.jpeg";
-import carousel2 from "../../lib/mobile-nav-icon.png";
+import carouse1 from "../../lib/banner1.png";
+import carouse2 from "../../lib/banner2.png";
+import carouse3 from "../../lib/banner3.jpeg";
+import carouse4 from "../../lib/banner4.png";
+
 import "../../css/main.css";
 
 const Carousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const images = [crouse1, carousel2, crouse1, carousel2];
+  const images = [carouse1, carouse2, carouse3, carouse4];
   const numSlides = images.length;
 
   const nextSlide = () => {
