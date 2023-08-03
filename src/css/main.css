@@ -269,6 +269,7 @@ iframe {
   padding-left: 1vw;
   border-radius: 4px;
   margin: 1vh;
+  cursor: pointer;
 }
 .each:hover {
   background-color: var(--grey-f-2);
