@@ -8,7 +8,7 @@ import SetUpProfile from "../onboarding/SetupProfile";
 import SocialMedia from "../onboarding/socialMeadia";
 import Success from "../onboarding/Success";
 import Welcome from "../onboarding/Welcome";
-import Header from "../Navbar/Navbar";
+import Navbar from "../Navbar/Navbar";
 import Footer from "../Navbar/footer";
 import Main from "../screens/main";
 import Snapshot1 from "../screens/Snapshot/snapshot-1";
@@ -31,6 +31,7 @@ import Embed from "../screens/embed";
 import SnapshotSideNav from "../Navbar/optionalsidebar";
 import Hot100_Sidebar from "../Navbar/hot100_sidebar";
 import { FilterProvider } from "../contexts/FilterContext";
+
 function App() {
   const [isSignedIn, setIsSignedIn] = useState(true);
 
@@ -59,7 +60,7 @@ function App() {
               path="/*"
               element={
                 <>
-                  <Header />
+                  <Navbar />
                   <Routes>
                     <Route
                       path="/"

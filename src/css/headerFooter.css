@@ -9,9 +9,30 @@
   --grey-f-2: #f2f2f2;
 }
 
+.language-select:focus {
+  border: none;
+  outline: none;
+}
+
+.language-select option {
+  /* Apply your desired styling to the options */
+  border: none;
+  background-color: var(--white);
+  color: var(--black);
+  font-size: 14px;
+}
+
+.language-select option:focus {
+  /* Apply your desired styling to the options */
+  border: none;
+  background-color: var(--white);
+  color: var(--black);
+  font-size: 14px;
+}
+
 .Header {
   width: 100vw;
-  height: 11vh;
+  height: 9vh;
   padding: 5vh 0 0 0;
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1);
   background-color: var(--white);
@@ -46,7 +67,7 @@
   font-family: Montserrat;
   font-size: 20px;
   /* height: 3vh; */
-  font-weight: 525;
+  font-weight: 400 ;
   font-stretch: normal;
   font-style: normal;
   line-height: 1;
@@ -85,13 +106,14 @@
 }
 .active {
   color: var(--deeper-purple);
+  font-weight: 525;
 }
 .underline_a {
   width: 100%;
   /* color: blue; */
   background-color: var(--deeper-purple);
   height: 4px;
-  margin-top: 8.5vh;
+  margin-top: 5.5vh;
 }
 body.active-modal {
   overflow-y: hidden;
@@ -138,13 +160,13 @@ body.active-modal {
   transform: translate(-50%, -50%);
   line-height: 1.4;
 
-  border-radius: 3px;
+  border-radius: 6px;
   /* max-width: 600px;
   min-width: 300px; */
   width: 18vw;
 
   border-radius: 8px;
-  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.18);
   background-color: var(--white);
 }
 .Nav-modal-Elements {
@@ -157,12 +179,30 @@ body.active-modal {
 .modal-Elements {
   padding: 0 2vw;
   margin: 0vh 0vh;
-
+  font-weight: 400;
   height: 5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
 }
 .modal-Elements:hover {
-  background-color: var(--grey-f-2);
+  background-color: var(--purple);
+  color: var(--white);
 }
+
+.modal-Elements:first-child:hover {
+  background-color: var(--purple);
+  color: var(--white);
+  border-radius: 8px 8px 0 0;
+}
+
+.modal-Elements:last-child:hover {
+  background-color: var(--purple);
+  color: var(--white); 
+  border-radius: 0 0 8px 8px;
+}
+
 .Sub-nav-elements {
   font-weight: 425;
   margin: 1.5vh 0.5vh;
@@ -267,3 +307,5 @@ body.active-modal {
     display: block;
   }
 }
+
+

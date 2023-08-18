@@ -21,14 +21,16 @@ export default function ProfileModal() {
       {/* <button onClick={toggleModal} className="btn-modal">
         Open
       </button> */}
-      <div style={{ display: "flex", justifyContent: "center" }}>
+      <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
         <img
           style={{
-            height: "3.0vh",
-            widhth: " 2wh",
+            objectFit: "cover",
+            height: "40px",
+            width: "40px",
             marginRight: "0.5vw",
-            borderRadius: "100%",
+            borderRadius: "50%",
           }}
+          alt="profile"
           src={ae}
           onClick={toggleModal}
         ></img>
