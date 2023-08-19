@@ -52,7 +52,7 @@ export default function ProfileModal() {
       </div>
 
       {modal && (
-        <div className="modal">
+        <div className="modal" style={{ zIndex: 1000}}>
           <div onClick={toggleModal} className="overlay"></div>
           <div className="modal-content">
             <div className="modal-Elements ">Account Settings</div>

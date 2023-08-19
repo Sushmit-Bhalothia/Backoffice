@@ -4,8 +4,9 @@
   "private": true,
   "dependencies": {
     "@directus/sdk": "^10.2.0",
+    "@fortawesome/fontawesome-svg-core": "^6.4.2",
     "@fortawesome/free-brands-svg-icons": "^6.4.0",
-    "@fortawesome/free-solid-svg-icons": "^6.4.0",
+    "@fortawesome/free-solid-svg-icons": "^6.4.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@superset-ui/embedded-sdk": "^0.1.0-alpha.9",
     "@testing-library/jest-dom": "^5.16.5",
