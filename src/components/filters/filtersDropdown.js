@@ -49,9 +49,9 @@ const FilterDropdown = () => {
         value={selectedFilter}
         onChange={handleChange}
       >
-        <option value="">Alphabetic</option>
-        <option value="id">ID</option>
-        <option value="name">Name</option>
+        {/* <option value=""></option> */}
+        <option value="CustomerID">ID</option>
+        <option value="FirstName">Name</option>
       </select>
     </div>
   );

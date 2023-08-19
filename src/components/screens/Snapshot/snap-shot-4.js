@@ -13,36 +13,47 @@ import { FilterContext } from "../../contexts/FilterContext";
 function Snapshot4() {
   const [publicdata, setPublicData] = useState([]);
   const { filter, updateFilter } = useContext(FilterContext);
-  console.log(filter);
+
   let filterId = parseInt(filter.name, 10);
 
   filterId = isNaN(filterId) ? -1 : filterId;
-  console.log("filter id is " + typeof filterId + filterId);
 
-  async function fetchPublicData() {
-    try {
-      const directus = new Directus("https://directus.bebackoffice.com");
-      const response = await directus.items("Team_Ranks").readByQuery({
-        sort: [filter.sort],
-        filter: {
-          _or: [
-            { name: filter.name ? { _contains: filter.name } : undefined },
-            { id: filterId ? { _eq: filterId } : undefined },
-          ],
-        },
-      });
-      setPublicData(response.data);
-    } catch (error) {
-      console.error("An error occurred while fetching public data:", error);
-    }
-  }
+  const [data, setData] = useState([]);
+  const tableName = "TemporaryRanksTable"; // Replace this with your actual table name
 
   useEffect(() => {
-    fetchPublicData();
+    fetchData(tableName);
   }, [filter]);
 
-  console.log("1", publicdata);
+  const fetchData = async (tableName) => {
+    try {
+      const response = await fetch(
+        `http://localhost:8055/demo/hello?start_date=2023-01-01%2000:00:00.000&end_date=2023-04-27%2023:59:59.000`
+      );
+      const jsonData = await response.json();
+      jsonData.sort((a, b) => {
+        const valueA = a[filter.sort];
+        const valueB = b[filter.sort];
+
+        // Check if both values are numbers
+        if (!isNaN(valueA) && !isNaN(valueB)) {
+          return parseFloat(valueA) - parseFloat(valueB);
+        }
+
+        // If one or both values are strings, use localeCompare for string comparison
+        return valueA.toString().localeCompare(valueB.toString());
+      });
+      setData(jsonData);
+      console.log(filter.sort);
+
+      // sorting;
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+
   // console.log(state.num);
+  console.log(data[0]);
 
   return (
     <div>
@@ -60,11 +71,11 @@ function Snapshot4() {
 
       <Filter />
 
-      {publicdata.length > 0 ? (
-        <TableComponent data={publicdata} />
-      ) : (
+      {/* {publicdata.length > 0 ? ( */}
+      <TableComponent data={data} />
+      {/* ) : (
         <div>No data Found ...</div>
-      )}
+      )} */}
     </div>
   );
 }
