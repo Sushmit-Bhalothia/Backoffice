@@ -32,7 +32,7 @@ export default function ProfileModal() {
             //marginRight: "0.5vw",
             marginLeft: "2vw",
 
-            borderRadius: "1000px",
+            borderRadius: "50%",
           }}
           src={ae}
           onClick={toggleModal}
