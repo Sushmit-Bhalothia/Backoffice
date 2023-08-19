@@ -1,7 +1,7 @@
 import "../../css/headerFooter.css";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import ae from "../../lib/Be_logo.png";
+// import { Link } from "react-router-dom";
+// import ae from "../../lib/Be_logo.png";
 import Dropdown from "../sharedComponents/dropdown";
 import { useNavigate } from "react-router-dom";
 import ProfileModal from "../sharedComponents/profilemodal";
