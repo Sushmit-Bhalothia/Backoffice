@@ -130,7 +130,7 @@ function Snapshot1() {
   return (
     <div>
       <div className="content-heading">
-        <h2> New Promoted Team Ranks</h2>
+        <div style={{ marginTop: "20px" }}> New Promoted Team Ranks</div>
         <div id="BodyFilter">
           <SearchBar />
         </div>
@@ -138,8 +138,10 @@ function Snapshot1() {
       <div className="content-subheading">
         This report contains your team ranks info or your enrolment tree
         organisation newly promoted ranks on the current cycle. You can use the
-        filter or additional column to fetch granular data
+        filter or additional column to fetch granular data.
       </div>
+
+      <Filter />
 
       <Filter />
 

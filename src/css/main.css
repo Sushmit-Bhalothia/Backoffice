@@ -1,7 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
-
-
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 
 :root {
   --white: #ffffff;
@@ -88,6 +85,7 @@ iframe {
   justify-content: space-between;
   padding: 1vw;
   width: 80vw;
+  font-size: 22px;
 
   font-family: Montserrat;
 
@@ -99,6 +97,7 @@ iframe {
   width: 50vw;
   padding-left: 1vw;
   font-family: Montserrat;
+  font-size: 15px;
 
   /* box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1); */
 
@@ -271,6 +270,9 @@ iframe {
 
   margin: auto;
 }
+.searchbar {
+  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.8);
+}
 .each {
   height: 5vh;
   padding-top: 1vh;
@@ -288,6 +290,12 @@ iframe {
   border-collapse: "collapse";
   font-family: "Montserrat";
 }
+
+th {
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--grey-82);
+}
 .table-container {
   width: 82vw;
   overflow: scroll;
@@ -302,6 +310,13 @@ iframe {
 }
 #BodyFilter {
   margin-top: 1.75vh;
+}
+thead {
+  box-shadow: 0 0 2px 0 rgba(93, 1, 162, 0.15);
+
+  border-radius: 10px;
+  height: 10px;
+  padding: 0;
 }
 
 @media screen and (max-width: 1050px) {

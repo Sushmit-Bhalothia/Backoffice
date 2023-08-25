@@ -67,7 +67,7 @@
   font-family: Montserrat;
   font-size: 20px;
   /* height: 3vh; */
-  font-weight: 400 ;
+  font-weight: 400;
   font-stretch: normal;
   font-style: normal;
   line-height: 1;
@@ -155,7 +155,7 @@ body.active-modal {
 
   position: absolute;
   top: 25vh;
-  right: -9vw;
+  right: -150px;
 
   transform: translate(-50%, -50%);
   line-height: 1.4;
@@ -163,7 +163,7 @@ body.active-modal {
   border-radius: 6px;
   /* max-width: 600px;
   min-width: 300px; */
-  width: 18vw;
+  width: 300px;
 
   border-radius: 8px;
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.18);
@@ -199,7 +199,7 @@ body.active-modal {
 
 .modal-Elements:last-child:hover {
   background-color: var(--purple);
-  color: var(--white); 
+  color: var(--white);
   border-radius: 0 0 8px 8px;
 }
 
@@ -307,5 +307,3 @@ body.active-modal {
     display: block;
   }
 }
-
-
