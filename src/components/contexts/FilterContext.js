@@ -7,7 +7,7 @@ export const FilterContext = createContext();
 export const FilterProvider = ({ children }) => {
   const [filter, setFilter] = useState({
     name: "",
-    sort: "id",
+    sort: "CustomerID",
     date: "",
     type: "",
     NextRank: "",
