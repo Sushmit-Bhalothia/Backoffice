@@ -31,7 +31,7 @@ const TableComponent = ({ data }) => {
       >
         <thead>
           <tr>
-            <th className="table-data">Customer_ID</th>
+            <th className="table-data">CustomerID</th>
             <th className="table-data">Name</th>
             <th className="table-data">Achieved_Rank</th>
             <th className="table-data">Direct_Sponsor</th>
@@ -48,11 +48,11 @@ const TableComponent = ({ data }) => {
                 height: "5.5vh",
               }}
             >
-              <td className="table-data">{entry.customerId}</td>
-              <td className="table-data">{entry.name}</td>
-              <td className="table-data">{entry.achievedRank}</td>
-              <td className="table-data">{entry.directSponsor}</td>
-              <td className="table-data">{entry.enrollmentLevel}</td>
+              <td className="table-data">{entry.CustomerID}</td>
+              <td className="table-data">{entry.FirstName}</td>
+              <td className="table-data">{entry.TotalCV}</td>
+              <td className="table-data">{entry.FirstName}</td>
+              <td className="table-data">{entry.totalEnrollment}</td>
               <td>
                 <button
                   className="Smaller-Button"
