@@ -103,7 +103,7 @@ function Main() {
             {/* Content for the "Getting Started" category */}
             <div style={{ marginTop: "10px" }}>
               <div className="category-data">Product and Services</div>
-              <div className="category-data">Manage Subscription</div>
+              <div className="category-data">Manage Subsiption</div>
               <div className="category-data"> upgrade/Renew Services</div>
               <div className="category-data">Annual packages</div>
             </div>
