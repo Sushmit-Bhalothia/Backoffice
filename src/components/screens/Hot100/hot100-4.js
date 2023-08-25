@@ -208,7 +208,7 @@ function Hot100_1() {
   return (
     <div>
       <div className="content-heading">
-        <h2> Top Enrollers</h2>
+        <div style={{ marginTop: "20px" }}> Top Enrollers</div>
         <div id="BodyFilter">
           <SearchBar style={{ width: "40vw" }} />
         </div>
@@ -217,7 +217,7 @@ function Hot100_1() {
         Some discription of the page here is list my top enrollers
       </div>
       <Filter />
-      <Addfilter />
+      {/* <Addfilter /> */}
       <Table data={data} />
     </div>
   );

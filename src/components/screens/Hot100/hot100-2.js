@@ -58,7 +58,7 @@ function Hot100_1() {
   return (
     <div>
       <div className="content-heading">
-        <h2> Top Enrollers</h2>
+        <div style={{ marginTop: "20px" }}> Top Enrollers</div>
         <div id="BodyFilter">
           <SearchBar />
         </div>
